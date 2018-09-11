@@ -1,0 +1,23 @@
+﻿QPushButton{
+    padding:10px;border-radius:15px;
+    color:#FFFFFF;
+    background:#3498DB;}
+
+QPushButton:hover{
+    color:#E5FEFF;
+    background:#5DACE4;}
+QPushButton:pressed{
+    color:#A0DAFB;
+    background:#2483C7;}
+
+
+QToolButton{
+        background-color: rgb(30, 141, 217);
+        color: rgb(255, 255, 255);
+}
+QToolButton:hover{
+         color:#E5FEFF;
+    background:#5DACE4;}
+QToolButton:pressed{
+    color:#A0DAFB;
+    background:#2483C7;}
