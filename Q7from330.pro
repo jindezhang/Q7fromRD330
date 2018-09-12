@@ -29,20 +29,34 @@ SOURCES += \
     widget_progress.cpp \
     dir_bt.cpp \
     data.cpp \
-    test_data.cpp
+    test_data.cpp \
+    mydialog.cpp \
+    win_canshu.cpp \
+    customtabstyle.cpp \
+    wg_canshu.cpp \
+    dg_login.cpp
 
 HEADERS += \
         mainwindow.h \
     widget_progress.h \
     dir_bt.h \
     data.h \
-    test_data.h
+    test_data.h \
+    mydialog.h \
+    win_canshu.h \
+    customtabstyle.h \
+    wg_canshu.h \
+    dg_login.h
 
 FORMS += \
         mainwindow.ui \
     widget_progress.ui \
     data.ui \
-    test_data.ui
+    test_data.ui \
+    mydialog.ui \
+    win_canshu.ui \
+    wg_canshu.ui \
+    dg_login.ui
 
 RESOURCES += \
     icon.qrc

@@ -2,13 +2,14 @@
 #include <QApplication>
 #include "data.h"
 #include <test_data.h>
+#include <win_canshu.h>
 
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
-    MainWindow w;
+    //MainWindow w;
     //Data w;
-//    Data w;
+    Win_Canshu w;
     w.show();
 
     QFile styleSheet(":/new/Qss.qss");

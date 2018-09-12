@@ -126,3 +126,9 @@ void MainWindow::on_bt_liulan_clicked()
     ui_data->show();
     this->hide();
 }
+
+void MainWindow::on_bt_help_clicked()
+{
+    myDialog* dialog = new myDialog();
+    dialog->exec();
+}

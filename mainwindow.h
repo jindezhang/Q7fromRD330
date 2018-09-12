@@ -6,6 +6,7 @@
 #include <QDebug>
 #include <QFile>
 #include <data.h>
+#include "mydialog.h"
 
 namespace Ui {
 class MainWindow;
@@ -28,6 +29,8 @@ private slots:
     void timer_Out();
     QString toStr(int i);
     void on_bt_liulan_clicked();
+
+    void on_bt_help_clicked();
 
 private:
     Ui::MainWindow *ui;

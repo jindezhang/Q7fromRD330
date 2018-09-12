@@ -23,7 +23,7 @@ void widget_progress::set_level(int level)
 //进度条宽3，间隔3
 void widget_progress::paintEvent(QPaintEvent *event)
 {
-    Q_UNUSED(event);
+    Q_UNUSED(event);//该变量不在函数体内使用，用于抑制编译器警告。
     QPainter pa(this);
 
     pa.setPen(QColor(0,0,0));
