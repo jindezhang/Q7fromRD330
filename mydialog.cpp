@@ -26,6 +26,25 @@ myDialog::~myDialog()
     delete ui;
 }
 
+void myDialog::set_info(QString info)
+{
+    ui->l_tips->setText(info);
+}
+
+void myDialog::set_icon(int type)
+{
+    switch (type) {
+    case 1:
+        ui->l_icon->setStyleSheet("background-image: url(:/new/home/home/sucess.png);");
+        break;
+    case 0:
+        ui->l_icon->setStyleSheet("background-image: url(:/new/home/home/warning.png);");
+        break;
+    default:
+        break;
+    }
+}
+
 
 void myDialog::paintEvent(QPaintEvent *event)
 {
@@ -48,9 +67,11 @@ void myDialog::on_pushButton_2_clicked()
 void myDialog::on_bt_ok_clicked()
 {
     emit sel_State(true);
+    this->close();
 }
 
 void myDialog::on_bt_cancel_clicked()
 {
     emit sel_State(false);
+    this->close();
 }

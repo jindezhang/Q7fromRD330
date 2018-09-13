@@ -17,6 +17,26 @@ Win_Canshu::~Win_Canshu()
 
 void Win_Canshu::on_pushButton_5_clicked()
 {
-    Dg_Login* dg_login = new Dg_Login();
-    dg_login->exec();
+    Dg_Login dg_login(this);
+
+    dg_login.exec();
+    qDebug()<<"weihui out";
+}
+
+void Win_Canshu::on_pushButton_16_clicked()
+{
+    this->parentWidget()->show();
+    this->close();
+}
+
+
+
+void Win_Canshu::on_pushButton_3_clicked()
+{
+    qDebug()<<"weihui out";
+}
+
+void Win_Canshu::on_bt_jiaozhen_clicked()
+{
+    qDebug()<<"weihui out";
 }

@@ -175,7 +175,7 @@ border-image: url(:/new/home/home/info.png);</string>
       </spacer>
      </item>
      <item>
-      <widget class="QPushButton" name="pushButton_4">
+      <widget class="QPushButton" name="bt_jiaozhen">
        <property name="minimumSize">
         <size>
          <width>130</width>
@@ -206,7 +206,7 @@ border-image: url(:/new/home/home/info.png);</string>
      </item>
     </layout>
    </widget>
-   <widget class="QWidget" name="">
+   <widget class="QWidget" name="layoutWidget">
     <property name="geometry">
      <rect>
       <x>20</x>

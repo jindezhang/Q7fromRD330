@@ -13,6 +13,12 @@
   <property name="windowTitle">
    <string>Dialog</string>
   </property>
+  <property name="styleSheet">
+   <string notr="true">#Dg_Login{
+	background-color: rgb(255, 255, 255);
+	border-radius:5px;
+}</string>
+  </property>
   <widget class="QPushButton" name="bt_cancel">
    <property name="geometry">
     <rect>

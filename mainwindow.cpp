@@ -30,7 +30,7 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->bt_kuaisu->setToolButtonStyle(Qt::ToolButtonTextUnderIcon);
 
     ui_data = nullptr;
-
+    ui_canshu = nullptr;
 
     fuhua_show(false);
 
@@ -131,4 +131,18 @@ void MainWindow::on_bt_help_clicked()
 {
     myDialog* dialog = new myDialog();
     dialog->exec();
+}
+
+void MainWindow::on_bt_canshu_clicked()
+{
+    if(nullptr == ui_canshu)
+        ui_canshu = new Win_Canshu(this);
+    ui_canshu->show();
+    this->hide();
+}
+
+void MainWindow::on_bt_saomiao_clicked()
+{
+    Dg_Login dg_login ;
+    dg_login.exec();
 }

@@ -34,7 +34,10 @@ SOURCES += \
     win_canshu.cpp \
     customtabstyle.cpp \
     wg_canshu.cpp \
-    dg_login.cpp
+    dg_login.cpp \
+    win_kuaisu.cpp \
+    my_label.cpp \
+    wg_pic.cpp
 
 HEADERS += \
         mainwindow.h \
@@ -46,7 +49,10 @@ HEADERS += \
     win_canshu.h \
     customtabstyle.h \
     wg_canshu.h \
-    dg_login.h
+    dg_login.h \
+    win_kuaisu.h \
+    my_label.h \
+    wg_pic.h
 
 FORMS += \
         mainwindow.ui \
@@ -56,7 +62,10 @@ FORMS += \
     mydialog.ui \
     win_canshu.ui \
     wg_canshu.ui \
-    dg_login.ui
+    dg_login.ui \
+    win_kuaisu.ui \
+    my_pic.ui \
+    wg_pic.ui
 
 RESOURCES += \
     icon.qrc

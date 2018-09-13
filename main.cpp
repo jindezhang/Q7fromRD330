@@ -3,13 +3,16 @@
 #include "data.h"
 #include <test_data.h>
 #include <win_canshu.h>
+#include "win_kuaisu.h"
 
+#pragma execution_character_set("utf-8")
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
-    //MainWindow w;
+//    MainWindow w;
+    Win_Kuaisu w;
     //Data w;
-    Win_Canshu w;
+//    Win_Canshu w;
     w.show();
 
     QFile styleSheet(":/new/Qss.qss");

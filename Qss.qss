@@ -21,3 +21,7 @@ QToolButton:hover{
 QToolButton:pressed{
     color:#A0DAFB;
     background:#2483C7;}
+
+QComboBox::drop-down{
+                width:40px;
+                }
