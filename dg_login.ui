@@ -48,7 +48,8 @@
    </property>
    <property name="styleSheet">
     <string notr="true">color: rgb(255, 255, 255);
-background-color: rgb(0, 57, 173);
+background-color: rgb(43, 148, 197);
+
 </string>
    </property>
    <property name="text">

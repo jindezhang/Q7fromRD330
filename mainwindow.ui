@@ -231,9 +231,7 @@
        </font>
       </property>
       <property name="styleSheet">
-       <string notr="true">
-
-</string>
+       <string notr="true"/>
       </property>
       <property name="text">
        <string>孵化检测</string>
@@ -274,8 +272,8 @@
      <widget class="QLabel" name="label_3">
       <property name="geometry">
        <rect>
-        <x>140</x>
-        <y>410</y>
+        <x>145</x>
+        <y>414</y>
         <width>54</width>
         <height>12</height>
        </rect>

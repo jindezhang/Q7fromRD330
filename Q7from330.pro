@@ -37,7 +37,10 @@ SOURCES += \
     dg_login.cpp \
     win_kuaisu.cpp \
     my_label.cpp \
-    wg_pic.cpp
+    wg_pic.cpp \
+    dg_progress.cpp \
+    wg_ks_table.cpp \
+    lb_check.cpp
 
 HEADERS += \
         mainwindow.h \
@@ -52,7 +55,10 @@ HEADERS += \
     dg_login.h \
     win_kuaisu.h \
     my_label.h \
-    wg_pic.h
+    wg_pic.h \
+    dg_progress.h \
+    wg_ks_table.h \
+    lb_check.h
 
 FORMS += \
         mainwindow.ui \
@@ -65,7 +71,9 @@ FORMS += \
     dg_login.ui \
     win_kuaisu.ui \
     my_pic.ui \
-    wg_pic.ui
+    wg_pic.ui \
+    dg_progress.ui \
+    wg_ks_table.ui
 
 RESOURCES += \
     icon.qrc

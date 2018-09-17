@@ -9,8 +9,8 @@
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
-//    MainWindow w;
-    Win_Kuaisu w;
+    MainWindow w;
+//    Win_Kuaisu w;
     //Data w;
 //    Win_Canshu w;
     w.show();

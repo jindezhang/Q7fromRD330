@@ -8,6 +8,7 @@ Win_Canshu::Win_Canshu(QWidget *parent) :
     ui->setupUi(this);
     ui->widget_2->hide();
     this->setStyleSheet("#Win_Canshu{background-color: rgb(255, 255, 255);}");
+    setWindowFlags(Qt::FramelessWindowHint | windowFlags());
 }
 
 Win_Canshu::~Win_Canshu()

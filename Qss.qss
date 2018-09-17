@@ -1,5 +1,6 @@
 ﻿QPushButton{
-    padding:10px;border-radius:15px;
+    padding:10px;
+    border-radius:15px;
     color:#FFFFFF;
     background:#3498DB;}
 
@@ -25,3 +26,5 @@ QToolButton:pressed{
 QComboBox::drop-down{
                 width:40px;
                 }
+
+

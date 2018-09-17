@@ -69,6 +69,7 @@
         <file>home/warning.png</file>
         <file>home/weihu.png</file>
         <file>home/weihu_1.png</file>
+        <file>home/q7.bmp</file>
     </qresource>
     <qresource prefix="/">
         <file>main.cpp</file>
@@ -76,7 +77,7 @@
         <file>mainwindow.h</file>
         <file>mainwindow.ui</file>
     </qresource>
-    <qresource lang="qss" prefix="/new">
+    <qresource prefix="/new" lang="qss">
         <file>Qss.qss</file>
     </qresource>
 </RCC>

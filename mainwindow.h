@@ -1,6 +1,7 @@
 ﻿#ifndef MAINWINDOW_H
 #define MAINWINDOW_H
 
+#include <win_kuaisu.h>
 #include <QMainWindow>
 #include<QTimer>
 #include <QDebug>
@@ -9,7 +10,7 @@
 #include "mydialog.h"
 #include "win_canshu.h"
 #include "dg_login.h"
-
+#include "dg_progress.h"
 
 namespace Ui {
 class MainWindow;
@@ -39,11 +40,15 @@ private slots:
 
     void on_bt_saomiao_clicked();//扫描按钮
 
+    void on_bt_kuaisu_clicked();//快速扫描的按钮
+
+
 private:
     Ui::MainWindow *ui;
     QTimer* t;
     int t_value;
     Data *ui_data;
+    Win_Kuaisu* ui_kuaisu;
     Win_Canshu* ui_canshu;
 };
 

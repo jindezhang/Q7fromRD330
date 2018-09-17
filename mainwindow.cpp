@@ -31,6 +31,7 @@ MainWindow::MainWindow(QWidget *parent) :
 
     ui_data = nullptr;
     ui_canshu = nullptr;
+    ui_kuaisu = nullptr;
 
     fuhua_show(false);
 
@@ -100,6 +101,10 @@ void MainWindow::on_bt_quxiao_clicked()
 void MainWindow::timer_Out()
 {
     t_value--;
+    if(0 == t_value){
+        t->stop();
+        return;
+    }
     QString h = toStr(t_value%60);
     QString m = toStr(t_value/60);
 
@@ -129,8 +134,8 @@ void MainWindow::on_bt_liulan_clicked()
 
 void MainWindow::on_bt_help_clicked()
 {
-    myDialog* dialog = new myDialog();
-    dialog->exec();
+    Dg_Progress dialog ;
+    dialog.exec();
 }
 
 void MainWindow::on_bt_canshu_clicked()
@@ -145,4 +150,12 @@ void MainWindow::on_bt_saomiao_clicked()
 {
     Dg_Login dg_login ;
     dg_login.exec();
+}
+
+void MainWindow::on_bt_kuaisu_clicked()
+{
+    if(nullptr == ui_kuaisu)
+        ui_kuaisu = new Win_Kuaisu(this);
+    ui_kuaisu->show();
+    this->hide();
 }
