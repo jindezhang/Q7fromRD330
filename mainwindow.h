@@ -11,6 +11,8 @@
 #include "win_canshu.h"
 #include "dg_login.h"
 #include "dg_progress.h"
+#include<dg_input.h>
+#include<wg_kuaisu.h>
 
 namespace Ui {
 class MainWindow;
@@ -50,6 +52,7 @@ private:
     Data *ui_data;
     Win_Kuaisu* ui_kuaisu;
     Win_Canshu* ui_canshu;
+    wg_kuaisu dg_login;
 };
 
 #endif // MAINWINDOW_H

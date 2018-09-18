@@ -40,7 +40,10 @@ SOURCES += \
     wg_pic.cpp \
     dg_progress.cpp \
     wg_ks_table.cpp \
-    lb_check.cpp
+    lb_check.cpp \
+    l_pic.cpp \
+    dg_input.cpp \
+    wg_kuaisu.cpp
 
 HEADERS += \
         mainwindow.h \
@@ -58,7 +61,10 @@ HEADERS += \
     wg_pic.h \
     dg_progress.h \
     wg_ks_table.h \
-    lb_check.h
+    lb_check.h \
+    l_pic.h \
+    dg_input.h \
+    wg_kuaisu.h
 
 FORMS += \
         mainwindow.ui \
@@ -73,7 +79,9 @@ FORMS += \
     my_pic.ui \
     wg_pic.ui \
     dg_progress.ui \
-    wg_ks_table.ui
+    wg_ks_table.ui \
+    dg_input.ui \
+    wg_kuaisu.ui
 
 RESOURCES += \
     icon.qrc

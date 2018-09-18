@@ -1,0 +1,469 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>wg_kuaisu</class>
+ <widget class="QWidget" name="wg_kuaisu">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>712</width>
+    <height>480</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <widget class="QWidget" name="widgetdg" native="true">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>711</width>
+     <height>481</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QWidget#widgetdg{
+	background-color: rgb(255, 255, 255);
+}</string>
+   </property>
+   <widget class="QPushButton" name="bt_ok">
+    <property name="geometry">
+     <rect>
+      <x>510</x>
+      <y>423</y>
+      <width>111</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>确认并退出</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>20</y>
+      <width>721</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(255, 255, 255);
+background-color: rgb(43, 148, 197);
+
+</string>
+    </property>
+    <property name="text">
+     <string>   样本信息</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="bt_cancel">
+    <property name="geometry">
+     <rect>
+      <x>310</x>
+      <y>423</y>
+      <width>111</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>取消</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_2">
+    <property name="geometry">
+     <rect>
+      <x>677</x>
+      <y>30</y>
+      <width>31</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border-image: url(:/new/home/home/guanbi.png);
+border-color: rgb(255, 255, 255);
+</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="bt_cancel_2">
+    <property name="geometry">
+     <rect>
+      <x>90</x>
+      <y>423</y>
+      <width>111</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>全部清空</string>
+    </property>
+   </widget>
+   <widget class="QFrame" name="framed">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>80</y>
+      <width>701</width>
+      <height>341</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">#framed{border:1px solid rgb(52, 178, 237);}
+QLineEdit{border-width:1px;}</string>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::StyledPanel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+    <widget class="QWidget" name="layoutWidget">
+     <property name="geometry">
+      <rect>
+       <x>350</x>
+       <y>20</y>
+       <width>331</width>
+       <height>293</height>
+      </rect>
+     </property>
+     <layout class="QGridLayout" name="gridLayout_3">
+      <property name="leftMargin">
+       <number>9</number>
+      </property>
+      <property name="topMargin">
+       <number>9</number>
+      </property>
+      <property name="rightMargin">
+       <number>9</number>
+      </property>
+      <property name="bottomMargin">
+       <number>9</number>
+      </property>
+      <property name="horizontalSpacing">
+       <number>9</number>
+      </property>
+      <property name="verticalSpacing">
+       <number>20</number>
+      </property>
+      <item row="0" column="0">
+       <widget class="QLabel" name="label_7">
+        <property name="font">
+         <font>
+          <family>Agency FB</family>
+          <pointsize>23</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>样品类型：</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="1">
+       <widget class="QLineEdit" name="type_card">
+        <property name="font">
+         <font>
+          <pointsize>23</pointsize>
+         </font>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="0">
+       <widget class="QLabel" name="label_8">
+        <property name="font">
+         <font>
+          <family>Agency FB</family>
+          <pointsize>23</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>患者类型：</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="0">
+       <widget class="QLabel" name="label_9">
+        <property name="font">
+         <font>
+          <family>Agency FB</family>
+          <pointsize>23</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>床 号：</string>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="0">
+       <widget class="QLabel" name="label_10">
+        <property name="font">
+         <font>
+          <family>Agency FB</family>
+          <pointsize>23</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>住院号：</string>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="1">
+       <widget class="QLineEdit" name="class_num">
+        <property name="font">
+         <font>
+          <pointsize>23</pointsize>
+         </font>
+        </property>
+       </widget>
+      </item>
+      <item row="4" column="0">
+       <widget class="QLabel" name="label_11">
+        <property name="font">
+         <font>
+          <family>Agency FB</family>
+          <pointsize>23</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>科 室：</string>
+        </property>
+       </widget>
+      </item>
+      <item row="4" column="1">
+       <widget class="QLineEdit" name="classroom">
+        <property name="font">
+         <font>
+          <pointsize>23</pointsize>
+         </font>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="1">
+       <widget class="QLineEdit" name="type_people">
+        <property name="font">
+         <font>
+          <pointsize>23</pointsize>
+         </font>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="1">
+       <widget class="QLineEdit" name="bed_num">
+        <property name="font">
+         <font>
+          <pointsize>23</pointsize>
+         </font>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+    <widget class="QWidget" name="layoutWidget_2">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>20</y>
+       <width>336</width>
+       <height>295</height>
+      </rect>
+     </property>
+     <layout class="QGridLayout" name="gridLayout_2">
+      <property name="leftMargin">
+       <number>9</number>
+      </property>
+      <property name="topMargin">
+       <number>9</number>
+      </property>
+      <property name="rightMargin">
+       <number>9</number>
+      </property>
+      <property name="bottomMargin">
+       <number>9</number>
+      </property>
+      <property name="horizontalSpacing">
+       <number>9</number>
+      </property>
+      <property name="verticalSpacing">
+       <number>20</number>
+      </property>
+      <item row="4" column="1">
+       <widget class="QLineEdit" name="doctoe">
+        <property name="font">
+         <font>
+          <pointsize>23</pointsize>
+         </font>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="0">
+       <widget class="QLabel" name="label_3">
+        <property name="font">
+         <font>
+          <family>Agency FB</family>
+          <pointsize>23</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>性 别：</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="1">
+       <widget class="QLineEdit" name="name">
+        <property name="font">
+         <font>
+          <pointsize>19</pointsize>
+         </font>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="0">
+       <widget class="QLabel" name="label_4">
+        <property name="font">
+         <font>
+          <family>Agency FB</family>
+          <pointsize>23</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>年 龄：</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="1">
+       <widget class="QComboBox" name="gender">
+        <property name="font">
+         <font>
+          <pointsize>23</pointsize>
+         </font>
+        </property>
+        <item>
+         <property name="text">
+          <string>男</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>女</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>其他</string>
+         </property>
+        </item>
+       </widget>
+      </item>
+      <item row="3" column="0">
+       <widget class="QLabel" name="label_5">
+        <property name="font">
+         <font>
+          <family>Agency FB</family>
+          <pointsize>23</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>审核者：</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="0">
+       <widget class="QLabel" name="label_2">
+        <property name="font">
+         <font>
+          <family>Agency FB</family>
+          <pointsize>23</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>姓 名：</string>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="1">
+       <widget class="QLineEdit" name="checker">
+        <property name="font">
+         <font>
+          <pointsize>23</pointsize>
+         </font>
+        </property>
+       </widget>
+      </item>
+      <item row="4" column="0">
+       <widget class="QLabel" name="label_6">
+        <property name="font">
+         <font>
+          <family>Agency FB</family>
+          <pointsize>23</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>送检医师：</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="1">
+       <layout class="QHBoxLayout" name="horizontalLayout">
+        <property name="spacing">
+         <number>7</number>
+        </property>
+        <property name="bottomMargin">
+         <number>1</number>
+        </property>
+        <item>
+         <widget class="QLineEdit" name="age">
+          <property name="font">
+           <font>
+            <pointsize>23</pointsize>
+           </font>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QComboBox" name="age2">
+          <property name="font">
+           <font>
+            <pointsize>23</pointsize>
+           </font>
+          </property>
+          <item>
+           <property name="text">
+            <string>岁</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>月</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>天</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>小时</string>
+           </property>
+          </item>
+         </widget>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </widget>
+   </widget>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

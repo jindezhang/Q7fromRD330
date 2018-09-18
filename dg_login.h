@@ -11,6 +11,7 @@ namespace Ui {
 class Dg_Login;
 }
 #pragma execution_character_set("utf-8")
+
 class Dg_Login : public QDialog
 {
     Q_OBJECT

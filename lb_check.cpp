@@ -1,8 +1,8 @@
 ﻿#include "lb_check.h"
 
-Lb_Check::Lb_Check(QObject *parent) : QLabel(parent)
+Lb_Check::Lb_Check(QWidget *parent) : QLabel(parent)
 {
-    setPixmap(QPixmap(""));
+//    setPixmap(QPixmap(""));
 
 }
 

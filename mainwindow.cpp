@@ -9,6 +9,7 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->setupUi(this);
     setWindowTitle("Q7");
     setWindowFlags(Qt::FramelessWindowHint | windowFlags());//窗体无边框，无法移动。
+//    showMaximized();//最大化
 
     t = new QTimer();
     connect(t,SIGNAL(timeout()),this,SLOT(timer_Out()));
@@ -134,7 +135,7 @@ void MainWindow::on_bt_liulan_clicked()
 
 void MainWindow::on_bt_help_clicked()
 {
-    Dg_Progress dialog ;
+    Dg_Input dialog ;
     dialog.exec();
 }
 
@@ -148,8 +149,8 @@ void MainWindow::on_bt_canshu_clicked()
 
 void MainWindow::on_bt_saomiao_clicked()
 {
-    Dg_Login dg_login ;
-    dg_login.exec();
+
+    dg_login.show();
 }
 
 void MainWindow::on_bt_kuaisu_clicked()

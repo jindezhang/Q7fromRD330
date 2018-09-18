@@ -10,6 +10,10 @@
 #include<QPixmap>
 #include<QTransform>
 #include<QLabel>
+#include <QPen>
+#include<QColor>
+#include<Qt>
+
 
 //通过信号的方式去替换选择测试卡
 //右图最大h = 174
@@ -26,18 +30,20 @@ public:
     ~Wg_Pic();
     void setTotalwidht(int pa_widtht);//设置外围总宽度，用于图片的反向变化。x值
     void set_BackgrandColor(QString pa_color);//传入颜色即可：rgd.../十六进制值。
-    void set_Pixmap(const QPixmap &pa_pix);//设置图片
+    void set_Pixmap(const QString &pa_path);//设置图片路径
+    void show_Pixmap();
     void set_Index(int index);//第几张照片。
-
     int get_Index();
 
 signals:
     void pic_index(int index);//点击了第几张图片，发送信号。从0开始
+public slots:
+    void index_get(int index);//选中第几张测试卡
 private:
     void resizeEvent(QResizeEvent *event);//当窗体大小变化的时候，触发的槽函数。
     void paintEvent(QPaintEvent *event);//重绘窗体
     void mousePressEvent(QMouseEvent *event);//重载鼠标点击事件。
-    int select_Pic();//点击选图算法
+    int select_Pic(int x, int y);//点击选图算法,非点击测试卡返回-1；其他情况返回对应的测试卡，传入点击坐标数
 
 private:
 
@@ -49,6 +55,7 @@ private:
     int m_total_widht;//外围窗体的总宽度
     int m_index;//需要显示的第几张测试卡
     QSize m_size;//窗体的大小值，用于点击选图算法。
+    QPixmap *m_pix;//图片
 };
 
 #endif // WG_PIC_H

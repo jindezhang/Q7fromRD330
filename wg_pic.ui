@@ -34,7 +34,7 @@
      <property name="styleSheet">
       <string notr="true"/>
      </property>
-     <widget class="QLabel" name="l_pic">
+     <widget class="L_Pic" name="l_pic">
       <property name="geometry">
        <rect>
         <x>0</x>
@@ -60,6 +60,13 @@
    </item>
   </layout>
  </widget>
+ <customwidgets>
+  <customwidget>
+   <class>L_Pic</class>
+   <extends>QLabel</extends>
+   <header>l_pic.h</header>
+  </customwidget>
+ </customwidgets>
  <resources/>
  <connections/>
 </ui>

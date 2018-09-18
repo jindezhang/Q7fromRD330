@@ -9,7 +9,7 @@ class Lb_Check : public QLabel
 {
     Q_OBJECT
 public:
-    explicit Lb_Check(QObject *parent = nullptr);
+    explicit Lb_Check(QWidget *parent = nullptr);
 
 signals:
 

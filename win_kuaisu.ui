@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
  <class>Win_Kuaisu</class>
  <widget class="QMainWindow" name="Win_Kuaisu">
@@ -42,7 +42,7 @@
     <item row="0" column="0">
      <widget class="QWidget" name="widget" native="true">
       <property name="styleSheet">
-       <string notr="true">#widget{background-color: rgb(255, 255, 255);}</string>
+       <string notr="true">QWidget#widget{background-color: rgb(255, 255, 255);}</string>
       </property>
       <widget class="QWidget" name="widget_2" native="true">
        <property name="geometry">
@@ -54,7 +54,7 @@
         </rect>
        </property>
        <property name="styleSheet">
-        <string notr="true">#widget_2{
+        <string notr="true">QWidget#widget_2{
 background-color: rgb(52, 178, 237);
 }
 QWidget{border-radius:15px;}</string>
@@ -63,7 +63,7 @@ QWidget{border-radius:15px;}</string>
         <item row="0" column="0">
          <widget class="QWidget" name="widget_3" native="true">
           <property name="styleSheet">
-           <string notr="true">background-color: rgb(255, 255, 255);</string>
+           <string notr="true">QWidget#widget_3{background-color: rgb(255, 255, 255);}</string>
           </property>
           <widget class="QSplitter" name="splitter">
            <property name="geometry">
@@ -91,7 +91,7 @@ QWidget{border-radius:15px;}</string>
              </size>
             </property>
             <property name="styleSheet">
-             <string notr="true">#wg_table{background-color: rgb(255, 255, 127);}
+             <string notr="true">QWidget#wg_table{background-color: rgb(255, 255, 127);}
 </string>
             </property>
            </widget>

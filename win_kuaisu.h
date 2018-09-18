@@ -1,6 +1,7 @@
 ﻿#ifndef WIN_KUAISU_H
 #define WIN_KUAISU_H
 
+#include <QDebug>
 #include <QMainWindow>
 #include <QSize>
 #include "wg_pic.h"

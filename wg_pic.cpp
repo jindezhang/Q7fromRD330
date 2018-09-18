@@ -12,10 +12,10 @@ Wg_Pic::Wg_Pic(bool picType,QWidget *parent) :
     //pic_width = 0;
     m_total_widht = 0;
 //    m_backcolor = "";
-    m_index = 0;
-
+    m_index = -1;
+    m_size = size();
     ui->l_pic->setScaledContents(true);
-
+    ui->l_pic->installEventFilter(this);
 }
 
 
@@ -32,10 +32,15 @@ void Wg_Pic::setTotalwidht(int pa_widtht)
 
 void Wg_Pic::set_BackgrandColor(QString pa_color)
 {
-//    m_backcolor = QString("background-color: rgb(%1);").arg(pa_color);
+    //    m_backcolor = QString("background-color: rgb(%1);").arg(pa_color);
 }
 
-void Wg_Pic::set_Pixmap(const QPixmap &pa_pix)
+void Wg_Pic::set_Pixmap(const QString &pa_path)
+{
+    m_pix = new QPixmap(pa_path);
+}
+
+void Wg_Pic::show_Pixmap()
 {
     //用label来装作图
 
@@ -44,12 +49,12 @@ void Wg_Pic::set_Pixmap(const QPixmap &pa_pix)
     //美图：open 1423*1003--->缩放因子：1.7428
     //first 166*353
     //pic 139*617---> w=139
-    //
+    //定位需要有个浮动值，因为卡与卡之间有间隙。所以copy() x = 139 --> 142
 
     if(!pic_Type){
        long double common = 1.7428;
-       m_index = 2;
-       QPixmap pix =  pa_pix.copy((169 + m_index * 139) * common, 353*common, 139*common, 617*common);
+       //m_index = 2;
+       QPixmap pix =  m_pix->copy((166 + m_index * 142) * common, 353*common, 139*common, 617*common);
        qDebug()<<"index"<<m_index;
        QMatrix trans;
        trans.rotate(270);
@@ -57,7 +62,10 @@ void Wg_Pic::set_Pixmap(const QPixmap &pa_pix)
 
        ui->l_pic->setPixmap(pix);
     }else{
-         ui->l_pic->setPixmap(pa_pix);//QPixmap(":/new/home/home/q7.bmp"));
+         ui->l_pic->setPixmap(*m_pix);//QPixmap(":/new/home/home/q7.bmp"));
+         //画框
+         ui->l_pic->set_Index(m_index);
+         ui->l_pic->label_Update();
        }
     ui->l_pic->move(0,0);
 }
@@ -65,11 +73,21 @@ void Wg_Pic::set_Pixmap(const QPixmap &pa_pix)
 void Wg_Pic::set_Index(int index)
 {
     m_index = index;
+
 }
 
 int Wg_Pic::get_Index()
 {
     return m_index;
+}
+
+void Wg_Pic::index_get(int index)
+{
+    //如果没有点击测试卡，那么丢弃信号。
+    if(-1 == index)
+        return;
+    m_index = index;
+    show_Pixmap();
 }
 
 void Wg_Pic::resizeEvent(QResizeEvent *event)
@@ -115,6 +133,8 @@ void Wg_Pic::paintEvent(QPaintEvent *event)
     Q_UNUSED(event);
 
     ui->l_pic->resize(size());
+
+
 //    static QPixmap pix (":/new/home/home/q7.bmp");
 //    QPainter painter(this);
 
@@ -139,15 +159,45 @@ void Wg_Pic::mousePressEvent(QMouseEvent *event)
 
     //只有右图才可以
     if(pic_Type){
-        qDebug() << event->x();
-        qDebug() << event->y();
+        m_index = select_Pic(event->x(), event->y());
+        ui->l_pic->set_Index(m_index);
+        if(-1 != m_index)
+            emit pic_index(m_index);
+//        this->repaint();
+//        qDebug() << event->x();
+//        qDebug() << event->y();
 
     }
 
 }
 
-int Wg_Pic::select_Pic()
+int Wg_Pic::select_Pic(int x, int y)
 {
+    //real:2480*1748
+    //美图：open 1423*1003--->缩放因子：1.7428
+    //first 166*353
+    //pic 139*617---> w=139
+//    图片区域：以open 的来计算。
+//            四个点(上下左）:(x1, y1)/(x1, y2)/(x2, y1)/(x2, y2)
+//            x1 = 166 （浮动）
+//            y1 = 353
+//            x2 = index * 139 + 166   index:卡槽测试卡总数
+//            y2 = 353 + 617
 
-    return 0;
+//    缩放因子：long double --> m_size.height() / 1003
+//    第几张试剂卡：(x - 166) / 139
+
+    long double common;//缩放因子
+    common = (long double)m_size.height() / 1003;
+    //不在图片区域，不要。
+    x /= common;
+    y /= common;
+    if(x < 166 || x > (8 * 139 + 166) || y < 353 || y > (353+617) )
+        return -1;
+
+    int tmp_index = ((x-166) / 139);
+
+    return tmp_index;
 }
+
+

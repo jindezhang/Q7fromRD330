@@ -8,6 +8,12 @@ wg_ks_table::wg_ks_table(QWidget *parent) :
     ui->setupUi(this);
     connect(ui->tableWidget, SIGNAL(cellPressed(int,int)), this, SLOT(click_Check(int,int)));
     build_tableHead();
+
+    //connect(ui->tableWidget, SIGNAL(itemClicked(QTableWidgetItem*)), this, SLOT(click_Item(QTableWidgetItem*)));
+    //double click
+    connect(ui->tableWidget, SIGNAL(doubleClicked(QModelIndex)), this, SLOT(click_double_Item(QModelIndex)));
+
+
 }
 
 wg_ks_table::~wg_ks_table()
@@ -15,9 +21,36 @@ wg_ks_table::~wg_ks_table()
     delete ui;
 }
 
+void wg_ks_table::sel_Row(int row)
+{
+//    ui->tableWidget->verticalScrollBar()->setSliderPosition(row);
+    ui->tableWidget->selectRow(row);
+    //    ui->tableWidget->setSelectionBehavior(QAbstractItemView::SelectRows);
+}
+
+void wg_ks_table::sel_Value(QString row)
+{
+    QList<QTableWidgetItem *> tmp_item = ui->tableWidget->findItems(row, Qt::MatchContains);
+    for(int i = 0; i < tmp_item.count(); i++){
+        //qDebug()<<tmp_item.at(i)->row();//输出行号
+        ui->tableWidget->selectRow(tmp_item.at(i)->row());
+    }
+}
+
+void wg_ks_table::sel_Value(int row)
+{
+    QString rows = QString("%1").arg(row+1);
+    QList<QTableWidgetItem *> tmp_item = ui->tableWidget->findItems(rows, Qt::MatchContains);
+    for(int i = 0; i < tmp_item.count(); i++){
+        //qDebug()<<tmp_item.at(i)->row();//输出行号
+        ui->tableWidget->selectRow(tmp_item.at(i)->row());
+    }
+}
+
 void wg_ks_table::click_Check(int row, int col)
 {
-    qDebug()<<row<<" "<<col;
+    click_Item(row);
+    //qDebug()<<row<<" "<<col;
     //如果不是第一列，那么返回。
     if(col != 0)
         return;
@@ -33,6 +66,23 @@ void wg_ks_table::click_Check(int row, int col)
     item->setIcon(QIcon(QPixmap(tmp_path)));
     ui->tableWidget->setItem(row, 0, item);
     v_check[row] = !v_check[row];
+}
+
+void wg_ks_table::click_Item(int row)
+{
+    QTableWidget * tmp_item = ui->tableWidget;
+    while(tmp_item->item(row, 1) == 0)
+        row--;
+    emit row_sel(tmp_item->item(row, 1)->text().toInt()-1);
+    qDebug()<<"click item"<<tmp_item->item(row, 1)->text();
+}
+
+
+void wg_ks_table::click_double_Item(QModelIndex item)
+{
+    Q_UNUSED(item);
+
+    kuai.exec();
 }
 
 void wg_ks_table::build_tableHead()
@@ -66,8 +116,11 @@ void wg_ks_table::build_tableHead()
     ui->tableWidget->horizontalHeader()->setFixedHeight(26);
 
     //设置内容居中
-    QString value = "hdddddddddddsetStretchLastSection(true)setStretchLastSection(true)dddddddddddddh";
-    set_value(value);
+    QString tmp_value;
+    for(int i = 7; i >= 0; i--){
+        tmp_value = QString("%1").arg(i+1);
+        set_value(tmp_value, i, 1);
+    }
 
     //隐藏旁边的数字，去掉默认自带的行号
     ui->tableWidget->verticalHeader()->setHidden(true);
@@ -122,9 +175,9 @@ void wg_ks_table::build_tableChecked(int pa_col)
 
 }
 
-void wg_ks_table::set_value(QString &value)
+void wg_ks_table::set_value(QString &value, int row, int col)
 {
-    ui->tableWidget->setItem(1,1, new QTableWidgetItem(value));
-    ui->tableWidget->item(1,1)->setTextAlignment(Qt::AlignCenter);
+    ui->tableWidget->setItem(row, col, new QTableWidgetItem(value));
+    ui->tableWidget->item(row, col)->setTextAlignment(Qt::AlignCenter);
 
 }
