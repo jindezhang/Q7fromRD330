@@ -38,26 +38,6 @@
     <property name="styleSheet">
      <string notr="true"/>
     </property>
-    <widget class="QWidget" name="widget_2" native="true">
-     <property name="geometry">
-      <rect>
-       <x>0</x>
-       <y>0</y>
-       <width>941</width>
-       <height>581</height>
-      </rect>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">#widget_2{
-border-top-right-radius:15px;
-border-top-left-radius:15px;
-border-bottom-right-radius:15px;
-border-bottom-left-radius:15px;
-background-color: rgb(52, 178, 237);
-}
-</string>
-     </property>
-    </widget>
    </widget>
    <widget class="QWidget" name="layoutWidget">
     <property name="geometry">
@@ -175,7 +155,7 @@ border-image: url(:/new/home/home/info.png);</string>
       </spacer>
      </item>
      <item>
-      <widget class="QPushButton" name="bt_jiaozhen">
+      <widget class="MainButton" name="bt_jiaozhen">
        <property name="minimumSize">
         <size>
          <width>130</width>
@@ -188,7 +168,7 @@ border-image: url(:/new/home/home/info.png);</string>
       </widget>
      </item>
      <item>
-      <widget class="QPushButton" name="pushButton_16">
+      <widget class="MainButton" name="pushButton_16">
        <property name="minimumSize">
         <size>
          <width>130</width>
@@ -256,7 +236,7 @@ border-image: url(:/new/home/home/info.png);</string>
      </item>
     </layout>
    </widget>
-   <widget class="QPushButton" name="pushButton_3">
+   <widget class="QPushButton" name="bt_canshu">
     <property name="geometry">
      <rect>
       <x>15</x>
@@ -278,16 +258,13 @@ border-image: url(:/new/home/home/info.png);</string>
      </size>
     </property>
     <property name="styleSheet">
-     <string notr="true">QPushButton{
-	border-image: url(:/new/home/home/params.png);
-			}
-</string>
+     <string notr="true"/>
     </property>
     <property name="text">
      <string/>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_5">
+   <widget class="QPushButton" name="bt_weihu">
     <property name="geometry">
      <rect>
       <x>15</x>
@@ -309,10 +286,23 @@ border-image: url(:/new/home/home/info.png);</string>
      </size>
     </property>
     <property name="styleSheet">
-     <string notr="true">border-image: url(:/new/home/home/weihu_1.png);</string>
+     <string notr="true"/>
     </property>
     <property name="text">
      <string/>
+    </property>
+   </widget>
+   <widget class="Wg_WeiHu" name="widget_2" native="true">
+    <property name="geometry">
+     <rect>
+      <x>70</x>
+      <y>70</y>
+      <width>941</width>
+      <height>581</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"/>
     </property>
    </widget>
   </widget>
@@ -323,6 +313,17 @@ border-image: url(:/new/home/home/info.png);</string>
    <extends>QWidget</extends>
    <header location="global">wg_canshu.h</header>
    <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>Wg_WeiHu</class>
+   <extends>QWidget</extends>
+   <header>wg_weihu.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>MainButton</class>
+   <extends>QPushButton</extends>
+   <header location="global">mainbutton.h</header>
   </customwidget>
  </customwidgets>
  <resources>

@@ -13,7 +13,7 @@
 #include <QPen>
 #include<QColor>
 #include<Qt>
-
+#include<wg_showpic.h>
 
 //通过信号的方式去替换选择测试卡
 //右图最大h = 174
@@ -43,6 +43,7 @@ private:
     void resizeEvent(QResizeEvent *event);//当窗体大小变化的时候，触发的槽函数。
     void paintEvent(QPaintEvent *event);//重绘窗体
     void mousePressEvent(QMouseEvent *event);//重载鼠标点击事件。
+    void mouseDoubleClickEvent(QMouseEvent * e);//双击
     int select_Pic(int x, int y);//点击选图算法,非点击测试卡返回-1；其他情况返回对应的测试卡，传入点击坐标数
 
 private:
@@ -56,6 +57,7 @@ private:
     int m_index;//需要显示的第几张测试卡
     QSize m_size;//窗体的大小值，用于点击选图算法。
     QPixmap *m_pix;//图片
+    Wg_ShowPic m_pic;//显示窗体
 };
 
 #endif // WG_PIC_H

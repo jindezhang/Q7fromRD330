@@ -8,13 +8,14 @@ Dg_Input::Dg_Input(QWidget *parent) :
     ui->setupUi(this);
     setWindowFlags(Qt::FramelessWindowHint | windowFlags());//窗体无边框，无法移动。
 
-    v_ed.push_back(ui->name);v_ed.push_back(ui->age);v_ed.push_back(ui->checker);
-    v_ed.push_back(ui->doctoe);
-    v_ed.push_back(ui->type_card);
-    v_ed.push_back(ui->type_people);v_ed.push_back(ui->bed_num);v_ed.push_back(ui->class_num);
-    v_ed.push_back(ui->classroom);
+    v_ed.push_back(ui->ed_name);v_ed.push_back(ui->ed_checker);
+    v_ed.push_back(ui->ed_doctor);
+    v_ed.push_back(ui->ed_type_card);
+    v_ed.push_back(ui->ed_type_people);v_ed.push_back(ui->ed_bed_num);v_ed.push_back(ui->ed_class_num);
+    v_ed.push_back(ui->ed_classroom);
 
-    ui->age->setValidator(new QRegExpValidator(QRegExp("[0-9]+$")));
+    v_ed.push_back(ui->ed_age);//年纪
+    ui->ed_age->setValidator(new QRegExpValidator(QRegExp("[0-9]+$")));
 }
 
 Dg_Input::~Dg_Input()
@@ -24,24 +25,38 @@ Dg_Input::~Dg_Input()
 
 void Dg_Input::on_bt_ok_clicked()
 {
-    close();
+    l_info.clear();
+    for(auto item : v_ed){
+        l_info.push_back(item->text());
+        qDebug()<<"item->text()"<<item->text();
+    }
+
+    l_info.push_back(ui->cbb_age2->currentText());
+    l_info.push_back(ui->cbb_gender->currentText());
+
+
+    hide();
 }
 
 void Dg_Input::on_bt_cancel_clicked()
 {
-
     hide();
 }
 
 void Dg_Input::on_bt_cancel_2_clicked()
 {
-    ui->age->clear();
-    ui->bed_num->clear();
-    ui->checker->clear();
-    ui->name->clear();
-    ui->doctoe->clear();
-    ui->type_card->clear();
-    ui->type_people->clear();
-    ui->classroom->clear();
-    ui->class_num->clear();
+    ui->ed_age->clear();
+    ui->ed_bed_num->clear();
+    ui->ed_checker->clear();
+    ui->ed_name->clear();
+    ui->ed_doctor->clear();
+    ui->ed_type_card->clear();
+    ui->ed_type_people->clear();
+    ui->ed_classroom->clear();
+    ui->ed_class_num->clear();
+}
+
+void Dg_Input::on_pushButton_2_clicked()
+{
+    hide();
 }

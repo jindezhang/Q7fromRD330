@@ -9,7 +9,7 @@
 #include<QDebug>
 #include <QScrollBar>
 #include<QTableWidgetItem>
-#include<wg_kuaisu.h>.
+#include<wg_kuaisu.h>
 #include<dg_input.h>
 
 namespace Ui {

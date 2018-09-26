@@ -20,15 +20,14 @@ public:
     ~Win_Canshu();
 
 private slots:
-    void on_pushButton_5_clicked();//维护
-
     void on_pushButton_16_clicked();//退出
 
-
-    void on_pushButton_3_clicked();//参数
-
-
+    void changePic(bool b);//改变按钮的图片；
     void on_bt_jiaozhen_clicked();//扫描仪校正
+    void on_weihui(bool b); //维护的确认。
+    void on_bt_canshu_clicked();
+
+    void on_bt_weihu_clicked();
 
 private:
     Ui::Win_Canshu *ui;

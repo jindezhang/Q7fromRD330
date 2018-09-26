@@ -36,6 +36,7 @@ MainWindow::MainWindow(QWidget *parent) :
 
     fuhua_show(false);
 
+    init_SQLite();
 
 }
 
@@ -135,7 +136,7 @@ void MainWindow::on_bt_liulan_clicked()
 
 void MainWindow::on_bt_help_clicked()
 {
-    Dg_Input dialog ;
+    Dg_AddProject dialog ;
     dialog.exec();
 }
 
@@ -159,4 +160,24 @@ void MainWindow::on_bt_kuaisu_clicked()
         ui_kuaisu = new Win_Kuaisu(this);
     ui_kuaisu->show();
     this->hide();
+}
+
+void MainWindow::init_SQLite()
+{
+    QSqlDatabase database;
+    if (QSqlDatabase::contains("qt_sql_default_connection"))
+    {
+        database = QSqlDatabase::database("qt_sql_default_connection");
+    }
+    else
+    {
+        database = QSqlDatabase::addDatabase("QSQLITE");
+        database.setDatabaseName("Q7.db");
+
+    }
+
+    if (!database.open())
+    {
+        qDebug() << "Error: Failed to connect database." << database.lastError();
+    }
 }

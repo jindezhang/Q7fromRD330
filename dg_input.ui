@@ -29,11 +29,9 @@
    <item row="0" column="0">
     <widget class="QWidget" name="widgetdg" native="true">
      <property name="styleSheet">
-      <string notr="true">QWidget#widgetdg{
-	background-color: rgb(255, 255, 255);
-}</string>
+      <string notr="true"/>
      </property>
-     <widget class="QPushButton" name="bt_ok">
+     <widget class="MainButton" name="bt_ok">
       <property name="geometry">
        <rect>
         <x>510</x>
@@ -46,31 +44,7 @@
        <string>确认并退出</string>
       </property>
      </widget>
-     <widget class="QLabel" name="label">
-      <property name="geometry">
-       <rect>
-        <x>0</x>
-        <y>20</y>
-        <width>721</width>
-        <height>51</height>
-       </rect>
-      </property>
-      <property name="font">
-       <font>
-        <pointsize>12</pointsize>
-       </font>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">color: rgb(255, 255, 255);
-background-color: rgb(43, 148, 197);
-
-</string>
-      </property>
-      <property name="text">
-       <string>   样本信息</string>
-      </property>
-     </widget>
-     <widget class="QPushButton" name="bt_cancel">
+     <widget class="MainButton" name="bt_cancel">
       <property name="geometry">
        <rect>
         <x>300</x>
@@ -83,25 +57,7 @@ background-color: rgb(43, 148, 197);
        <string>取消</string>
       </property>
      </widget>
-     <widget class="QPushButton" name="pushButton_2">
-      <property name="geometry">
-       <rect>
-        <x>677</x>
-        <y>30</y>
-        <width>31</width>
-        <height>31</height>
-       </rect>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">border-image: url(:/new/home/home/guanbi.png);
-border-color: rgb(255, 255, 255);
-</string>
-      </property>
-      <property name="text">
-       <string/>
-      </property>
-     </widget>
-     <widget class="QPushButton" name="bt_cancel_2">
+     <widget class="MainButton" name="bt_cancel_2">
       <property name="geometry">
        <rect>
         <x>80</x>
@@ -175,7 +131,7 @@ QLineEdit{border-width:1px;}</string>
          </widget>
         </item>
         <item row="0" column="1">
-         <widget class="QLineEdit" name="type_card">
+         <widget class="QLineEdit" name="ed_type_card">
           <property name="font">
            <font>
             <pointsize>23</pointsize>
@@ -223,7 +179,7 @@ QLineEdit{border-width:1px;}</string>
          </widget>
         </item>
         <item row="3" column="1">
-         <widget class="QLineEdit" name="class_num">
+         <widget class="QLineEdit" name="ed_class_num">
           <property name="font">
            <font>
             <pointsize>23</pointsize>
@@ -245,7 +201,7 @@ QLineEdit{border-width:1px;}</string>
          </widget>
         </item>
         <item row="4" column="1">
-         <widget class="QLineEdit" name="classroom">
+         <widget class="QLineEdit" name="ed_classroom">
           <property name="font">
            <font>
             <pointsize>23</pointsize>
@@ -254,7 +210,7 @@ QLineEdit{border-width:1px;}</string>
          </widget>
         </item>
         <item row="1" column="1">
-         <widget class="QLineEdit" name="type_people">
+         <widget class="QLineEdit" name="ed_type_people">
           <property name="font">
            <font>
             <pointsize>23</pointsize>
@@ -263,7 +219,7 @@ QLineEdit{border-width:1px;}</string>
          </widget>
         </item>
         <item row="2" column="1">
-         <widget class="QLineEdit" name="bed_num">
+         <widget class="QLineEdit" name="ed_bed_num">
           <property name="font">
            <font>
             <pointsize>23</pointsize>
@@ -273,7 +229,7 @@ QLineEdit{border-width:1px;}</string>
         </item>
        </layout>
       </widget>
-      <widget class="QWidget" name="">
+      <widget class="QWidget" name="layoutWidget">
        <property name="geometry">
         <rect>
          <x>10</x>
@@ -302,7 +258,7 @@ QLineEdit{border-width:1px;}</string>
          <number>20</number>
         </property>
         <item row="4" column="1">
-         <widget class="QLineEdit" name="doctoe">
+         <widget class="QLineEdit" name="ed_doctor">
           <property name="font">
            <font>
             <pointsize>23</pointsize>
@@ -324,7 +280,7 @@ QLineEdit{border-width:1px;}</string>
          </widget>
         </item>
         <item row="0" column="1">
-         <widget class="QLineEdit" name="name">
+         <widget class="QLineEdit" name="ed_name">
           <property name="font">
            <font>
             <pointsize>19</pointsize>
@@ -346,7 +302,7 @@ QLineEdit{border-width:1px;}</string>
          </widget>
         </item>
         <item row="1" column="1">
-         <widget class="QComboBox" name="gender">
+         <widget class="QComboBox" name="cbb_gender">
           <property name="font">
            <font>
             <pointsize>23</pointsize>
@@ -396,7 +352,7 @@ QLineEdit{border-width:1px;}</string>
          </widget>
         </item>
         <item row="3" column="1">
-         <widget class="QLineEdit" name="checker">
+         <widget class="QLineEdit" name="ed_checker">
           <property name="font">
            <font>
             <pointsize>23</pointsize>
@@ -426,7 +382,7 @@ QLineEdit{border-width:1px;}</string>
            <number>1</number>
           </property>
           <item>
-           <widget class="QLineEdit" name="age">
+           <widget class="QLineEdit" name="ed_age">
             <property name="font">
              <font>
               <pointsize>23</pointsize>
@@ -435,7 +391,7 @@ QLineEdit{border-width:1px;}</string>
            </widget>
           </item>
           <item>
-           <widget class="QComboBox" name="age2">
+           <widget class="QComboBox" name="cbb_age2">
             <property name="font">
              <font>
               <pointsize>23</pointsize>
@@ -468,10 +424,62 @@ QLineEdit{border-width:1px;}</string>
        </layout>
       </widget>
      </widget>
+     <widget class="QPushButton" name="pushButton_2">
+      <property name="geometry">
+       <rect>
+        <x>680</x>
+        <y>20</y>
+        <width>31</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">border-image: url(:/new/home/home/guanbi.png);
+border-color: rgb(255, 255, 255);</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="pic">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>20</y>
+        <width>723</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true"> 
+</string>
+      </property>
+      <property name="text">
+       <string>  样本信息</string>
+      </property>
+     </widget>
+     <zorder>bt_ok</zorder>
+     <zorder>bt_cancel</zorder>
+     <zorder>bt_cancel_2</zorder>
+     <zorder>framed</zorder>
+     <zorder>pic</zorder>
+     <zorder>pushButton_2</zorder>
     </widget>
    </item>
   </layout>
  </widget>
+ <customwidgets>
+  <customwidget>
+   <class>MainButton</class>
+   <extends>QPushButton</extends>
+   <header location="global">mainbutton.h</header>
+  </customwidget>
+ </customwidgets>
  <resources/>
  <connections/>
 </ui>

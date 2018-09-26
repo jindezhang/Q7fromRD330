@@ -43,7 +43,20 @@ SOURCES += \
     lb_check.cpp \
     l_pic.cpp \
     dg_input.cpp \
-    wg_kuaisu.cpp
+    wg_kuaisu.cpp \
+    wg_showpic.cpp \
+    wg_weihu.cpp \
+    wg_locationpic.cpp \
+    dg_piclocation.cpp \
+    dg_addproject.cpp \
+    dg_addpro.cpp \
+    dg_check_yq.cpp \
+    dg_check_td.cpp \
+    dg_setting_long.cpp \
+    dg_setting_add.cpp \
+    dg_outsetting.cpp \
+    mainbutton.cpp \
+    vicebutton.cpp
 
 HEADERS += \
         mainwindow.h \
@@ -64,7 +77,20 @@ HEADERS += \
     lb_check.h \
     l_pic.h \
     dg_input.h \
-    wg_kuaisu.h
+    wg_kuaisu.h \
+    wg_showpic.h \
+    wg_weihu.h \
+    wg_locationpic.h \
+    dg_piclocation.h \
+    dg_addproject.h \
+    dg_addpro.h \
+    dg_check_yq.h \
+    dg_check_td.h \
+    dg_setting_long.h \
+    dg_setting_add.h \
+    dg_outsetting.h \
+    mainbutton.h \
+    vicebutton.h
 
 FORMS += \
         mainwindow.ui \
@@ -81,7 +107,18 @@ FORMS += \
     dg_progress.ui \
     wg_ks_table.ui \
     dg_input.ui \
-    wg_kuaisu.ui
+    wg_kuaisu.ui \
+    wg_showpic.ui \
+    wg_weihu.ui \
+    wg_locationpic.ui \
+    dg_piclocation.ui \
+    dg_addproject.ui \
+    dg_addpro.ui \
+    dg_check_yq.ui \
+    dg_check_td.ui \
+    dg_setting_long.ui \
+    dg_setting_add.ui \
+    dg_outsetting.ui
 
 RESOURCES += \
     icon.qrc

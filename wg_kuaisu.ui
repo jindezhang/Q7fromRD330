@@ -27,7 +27,7 @@
 	background-color: rgb(255, 255, 255);
 }</string>
    </property>
-   <widget class="QPushButton" name="bt_ok">
+   <widget class="MainButton" name="bt_ok">
     <property name="geometry">
      <rect>
       <x>510</x>
@@ -40,13 +40,13 @@
      <string>确认并退出</string>
     </property>
    </widget>
-   <widget class="QLabel" name="label">
+   <widget class="QLabel" name="pic">
     <property name="geometry">
      <rect>
       <x>0</x>
       <y>20</y>
       <width>721</width>
-      <height>51</height>
+      <height>41</height>
      </rect>
     </property>
     <property name="font">
@@ -55,16 +55,13 @@
      </font>
     </property>
     <property name="styleSheet">
-     <string notr="true">color: rgb(255, 255, 255);
-background-color: rgb(43, 148, 197);
-
-</string>
+     <string notr="true"/>
     </property>
     <property name="text">
      <string>   样本信息</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="bt_cancel">
+   <widget class="MainButton" name="bt_cancel">
     <property name="geometry">
      <rect>
       <x>310</x>
@@ -81,7 +78,7 @@ background-color: rgb(43, 148, 197);
     <property name="geometry">
      <rect>
       <x>677</x>
-      <y>30</y>
+      <y>21</y>
       <width>31</width>
       <height>31</height>
      </rect>
@@ -95,7 +92,7 @@ border-color: rgb(255, 255, 255);
      <string/>
     </property>
    </widget>
-   <widget class="QPushButton" name="bt_cancel_2">
+   <widget class="MainButton" name="bt_cancel_2">
     <property name="geometry">
      <rect>
       <x>90</x>
@@ -464,6 +461,13 @@ QLineEdit{border-width:1px;}</string>
    </widget>
   </widget>
  </widget>
+ <customwidgets>
+  <customwidget>
+   <class>MainButton</class>
+   <extends>QPushButton</extends>
+   <header location="global">mainbutton.h</header>
+  </customwidget>
+ </customwidgets>
  <resources/>
  <connections/>
 </ui>

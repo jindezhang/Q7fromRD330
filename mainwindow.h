@@ -13,6 +13,9 @@
 #include "dg_progress.h"
 #include<dg_input.h>
 #include<wg_kuaisu.h>
+#include<QSqlDatabase>
+#include<QSqlError>
+#include<dg_addproject.h>
 
 namespace Ui {
 class MainWindow;
@@ -43,7 +46,7 @@ private slots:
     void on_bt_saomiao_clicked();//扫描按钮
 
     void on_bt_kuaisu_clicked();//快速扫描的按钮
-
+    void init_SQLite();
 
 private:
     Ui::MainWindow *ui;

@@ -19,6 +19,13 @@ myDialog::myDialog(QWidget *parent) :
     //ui->l_tips->setGeometry(QRect(328, 240, 329, 27*4)); //四倍行距
     ui->l_tips->setWordWrap(true);
     ui->l_tips->setAlignment(Qt::AlignTop);
+    ui->l_tips2->setWordWrap(true);
+
+    //回车按键
+//    QShortcut *key=new QShortcut(QKeySequence(Qt::Key_Return),this);//创建一个快捷键"Key_Return"键
+
+//    connect(key,SIGNAL(activated()),this,SLOT(槽函数));//连接到指定槽函数
+    ui->l_tips2->setFont(QFont("楷体", 11, 50));
 }
 
 myDialog::~myDialog()
@@ -26,7 +33,7 @@ myDialog::~myDialog()
     delete ui;
 }
 
-void myDialog::set_info(QString info)
+void myDialog::set_info(QString &info)
 {
     ui->l_tips->setText(info);
 }
@@ -45,6 +52,12 @@ void myDialog::set_icon(int type)
     }
 }
 
+void myDialog::set_value(QString info)
+{
+
+    ui->l_tips2->setText(info);
+}
+
 
 void myDialog::paintEvent(QPaintEvent *event)
 {
@@ -61,17 +74,17 @@ void myDialog::paintEvent(QPaintEvent *event)
 
 void myDialog::on_pushButton_2_clicked()
 {
-    this->close();
+    hide();
 }
 
 void myDialog::on_bt_ok_clicked()
 {
     emit sel_State(true);
-    this->close();
+    hide();
 }
 
 void myDialog::on_bt_cancel_clicked()
 {
     emit sel_State(false);
-    this->close();
+    hide();
 }

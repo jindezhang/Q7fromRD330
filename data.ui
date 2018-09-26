@@ -28,7 +28,7 @@
   <property name="styleSheet">
    <string notr="true">#QWidget{background-color: rgb(245, 255, 253);}</string>
   </property>
-  <widget class="QLabel" name="label">
+  <widget class="QLabel" name="logo">
    <property name="geometry">
     <rect>
      <x>19</x>
@@ -78,7 +78,7 @@
      <x>10</x>
      <y>50</y>
      <width>1001</width>
-     <height>601</height>
+     <height>591</height>
     </rect>
    </property>
    <property name="styleSheet">
@@ -117,7 +117,7 @@ QPushButton:pressed{
     <property name="frameShadow">
      <enum>QFrame::Raised</enum>
     </property>
-    <widget class="QTableView" name="tableView">
+    <widget class="QTableView" name="tableView_data">
      <property name="geometry">
       <rect>
        <x>10</x>
@@ -127,7 +127,7 @@ QPushButton:pressed{
       </rect>
      </property>
     </widget>
-    <widget class="QPushButton" name="bt_del">
+    <widget class="ViceButton" name="bt_del">
      <property name="geometry">
       <rect>
        <x>40</x>
@@ -143,7 +143,7 @@ QPushButton:pressed{
       <string>删除数据</string>
      </property>
     </widget>
-    <widget class="QPushButton" name="pushButton_3">
+    <widget class="ViceButton" name="bt_pageup">
      <property name="geometry">
       <rect>
        <x>190</x>
@@ -195,7 +195,7 @@ QPushButton:pressed{
       <string/>
      </property>
     </widget>
-    <widget class="QPushButton" name="pushButton_4">
+    <widget class="ViceButton" name="bt_pagedown_data">
      <property name="geometry">
       <rect>
        <x>260</x>
@@ -211,7 +211,7 @@ QPushButton:pressed{
       <string>下一页</string>
      </property>
     </widget>
-    <widget class="QPushButton" name="bt_select">
+    <widget class="ViceButton" name="bt_select">
      <property name="geometry">
       <rect>
        <x>40</x>
@@ -238,7 +238,7 @@ QPushButton:pressed{
      </property>
      <layout class="QGridLayout" name="gridLayout">
       <item row="0" column="0">
-       <widget class="QCheckBox" name="checkBox_3">
+       <widget class="QCheckBox" name="cb_testnum_data">
         <property name="font">
          <font>
           <family>微软雅黑</family>
@@ -251,7 +251,7 @@ QPushButton:pressed{
        </widget>
       </item>
       <item row="0" column="1">
-       <widget class="QLineEdit" name="lineEdit_3">
+       <widget class="QLineEdit" name="ed_testnum_data">
         <property name="minimumSize">
          <size>
           <width>111</width>
@@ -261,7 +261,7 @@ QPushButton:pressed{
        </widget>
       </item>
       <item row="1" column="0">
-       <widget class="QCheckBox" name="checkBox_4">
+       <widget class="QCheckBox" name="cb_bed_data">
         <property name="font">
          <font>
           <family>微软雅黑</family>
@@ -274,7 +274,7 @@ QPushButton:pressed{
        </widget>
       </item>
       <item row="1" column="1">
-       <widget class="QLineEdit" name="lineEdit_4">
+       <widget class="QLineEdit" name="ed_bed_data">
         <property name="minimumSize">
          <size>
           <width>111</width>
@@ -296,7 +296,7 @@ QPushButton:pressed{
      </property>
      <layout class="QGridLayout" name="gridLayout_2">
       <item row="0" column="0">
-       <widget class="QCheckBox" name="checkBox_10">
+       <widget class="QCheckBox" name="cb_pici_data">
         <property name="font">
          <font>
           <family>微软雅黑</family>
@@ -309,7 +309,7 @@ QPushButton:pressed{
        </widget>
       </item>
       <item row="0" column="1">
-       <widget class="QLineEdit" name="lineEdit_9">
+       <widget class="QLineEdit" name="ed_pici_data">
         <property name="minimumSize">
          <size>
           <width>111</width>
@@ -319,7 +319,7 @@ QPushButton:pressed{
        </widget>
       </item>
       <item row="1" column="0">
-       <widget class="QCheckBox" name="checkBox_9">
+       <widget class="QCheckBox" name="cb_name_data">
         <property name="font">
          <font>
           <family>微软雅黑</family>
@@ -332,7 +332,7 @@ QPushButton:pressed{
        </widget>
       </item>
       <item row="1" column="1">
-       <widget class="QLineEdit" name="lineEdit_10">
+       <widget class="QLineEdit" name="ed_name_data">
         <property name="minimumSize">
          <size>
           <width>111</width>
@@ -354,7 +354,7 @@ QPushButton:pressed{
      </property>
      <layout class="QGridLayout" name="gridLayout_3">
       <item row="0" column="0">
-       <widget class="QCheckBox" name="checkBox_11">
+       <widget class="QCheckBox" name="cb_pronum_data">
         <property name="font">
          <font>
           <family>微软雅黑</family>
@@ -367,7 +367,7 @@ QPushButton:pressed{
        </widget>
       </item>
       <item row="0" column="1">
-       <widget class="QComboBox" name="comboBox">
+       <widget class="QComboBox" name="cbb_pronum_data">
         <property name="minimumSize">
          <size>
           <width>111</width>
@@ -395,7 +395,7 @@ QPushButton:pressed{
        </widget>
       </item>
       <item row="1" column="0">
-       <widget class="QCheckBox" name="checkBox_2">
+       <widget class="QCheckBox" name="cb_classnum_data">
         <property name="font">
          <font>
           <family>微软雅黑</family>
@@ -408,7 +408,7 @@ QPushButton:pressed{
        </widget>
       </item>
       <item row="1" column="1">
-       <widget class="QLineEdit" name="lineEdit_2">
+       <widget class="QLineEdit" name="ed_classnum_data">
         <property name="minimumSize">
          <size>
           <width>111</width>
@@ -453,7 +453,7 @@ QPushButton:pressed{
        </widget>
       </item>
       <item>
-       <widget class="QPushButton" name="pushButton_5">
+       <widget class="ViceButton" name="bt_jump_data">
         <property name="minimumSize">
          <size>
           <width>61</width>
@@ -483,7 +483,7 @@ QPushButton:pressed{
    </property>
    <layout class="QHBoxLayout" name="horizontalLayout">
     <item>
-     <widget class="QPushButton" name="pushButton_2">
+     <widget class="MainButton" name="pushButton_2">
       <property name="minimumSize">
        <size>
         <width>130</width>
@@ -509,7 +509,7 @@ QPushButton:pressed{
      </spacer>
     </item>
     <item>
-     <widget class="QPushButton" name="pushButton_17">
+     <widget class="MainButton" name="pushButton_17">
       <property name="minimumSize">
        <size>
         <width>130</width>
@@ -535,7 +535,7 @@ QPushButton:pressed{
      </spacer>
     </item>
     <item>
-     <widget class="QPushButton" name="pushButton_12">
+     <widget class="MainButton" name="bt_showall">
       <property name="minimumSize">
        <size>
         <width>130</width>
@@ -561,7 +561,7 @@ QPushButton:pressed{
      </spacer>
     </item>
     <item>
-     <widget class="QPushButton" name="pushButton_13">
+     <widget class="MainButton" name="pushButton_13">
       <property name="minimumSize">
        <size>
         <width>130</width>
@@ -587,7 +587,7 @@ QPushButton:pressed{
      </spacer>
     </item>
     <item>
-     <widget class="QPushButton" name="pushButton_14">
+     <widget class="MainButton" name="pushButton_14">
       <property name="minimumSize">
        <size>
         <width>130</width>
@@ -613,7 +613,7 @@ QPushButton:pressed{
      </spacer>
     </item>
     <item>
-     <widget class="QPushButton" name="pushButton_15">
+     <widget class="MainButton" name="pushButton_15">
       <property name="minimumSize">
        <size>
         <width>130</width>
@@ -632,6 +632,18 @@ QPushButton:pressed{
    </layout>
   </widget>
  </widget>
+ <customwidgets>
+  <customwidget>
+   <class>MainButton</class>
+   <extends>QPushButton</extends>
+   <header location="global">mainbutton.h</header>
+  </customwidget>
+  <customwidget>
+   <class>ViceButton</class>
+   <extends>QPushButton</extends>
+   <header location="global">vicebutton.h</header>
+  </customwidget>
+ </customwidgets>
  <resources>
   <include location="icon.qrc"/>
  </resources>

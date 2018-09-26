@@ -1,17 +1,56 @@
-﻿QPushButton{
+
+/*QPushButton{
     padding:10px;
     border-radius:15px;
     color:#FFFFFF;
     background:#3498DB;}
 
 QPushButton:hover{
-    color:#E5FEFF;
+    color:#E5FEFF;		
     background:#5DACE4;}
 QPushButton:pressed{
     color:#A0DAFB;
     background:#2483C7;}
+*/
 
+/*in window of buttons*/
+MainButton{
+    padding:10px;
+    border-radius:15px;
+    color:#FFFFFF;
+    background:#3498DB;}
 
+MainButton:hover{
+    color:#E5FEFF;
+    background:#5DACE4;}
+MainButton:pressed{
+    color:#A0DAFB;
+    background:#2483C7;}
+
+/*in functional zone of buttons*/
+ViceButton{
+    color:rgb(0,0,0);
+    border-image: url(:/new/home/home/button.png);
+}
+
+ViceButton:hover{
+    color:rgb(40, 40, 40);
+	border-image: url(:/new/home/home/button_1.png);
+	border:2px solid  rgb(52, 178, 237);
+	
+   }
+ViceButton:pressed{
+    color:rgb(40, 40, 40);
+    }
+
+/*the pic*/
+QLabel#pic{
+	border-image: url(:/new/home/home/tan_bg.png);
+	/*background-color: rgba(255, 255, 224, 50%);/*set transparency */
+	/*background-color:rgb(255,255,255);*/
+	color: rgb(255, 255, 255);
+}
+/*
 QToolButton{
         background-color: rgb(30, 141, 217);
         color: rgb(255, 255, 255);
@@ -19,12 +58,126 @@ QToolButton{
 QToolButton:hover{
          color:#E5FEFF;
     background:#5DACE4;}
+*/
+
+/*in mainwindows of toolbutton*/
+QToolButton
+{
+	border-radius: 11px;
+	border: 2px solid  rgb(168, 213, 242);
+	background-color: rgb(31, 145, 218);
+	color: rgb(255, 255, 255);
+}
+QToolButton:hover
+{
+    background-color: rgb(15, 100, 165);
+}
 QToolButton:pressed{
     color:#A0DAFB;
-    background:#2483C7;}
+    background:#2483C7;
+}
 
-QComboBox::drop-down{
-                width:40px;
-                }
+/*all QComboBox*/
+QComboBox::down-arrow:pressed{
+	image:url(:/new/home/home/drop_down.png)
+}
+
+QComboBox{
+	border: 1px solid  rgb(194, 194, 194);
+	background-color: rgb(255, 255, 255);
+}
+
+QComboBox::down-arrow {
+	image: url(:/new/home/home/drop.png);
+}
+
+QComboBox::drop-down {
+    subcontrol-origin: padding;
+    subcontrol-position: top right;
+    width:34px;
+    border-left-width: 1px;
+    border-left-color: darkgray;
+    border-left-style: solid; /* just a single line */
+    border-top-right-radius: 3px; /* same radius as the QComboBox */
+    border-bottom-right-radius: 3px;
+}
 
 
+QWidget#wg_showpic1{
+    background-color: rgb(52, 178, 237);
+    border-radius: 15px;
+}
+QWidget#wg_showpic2{
+	background-color:rgb(255,255,255);	
+}
+
+/****weihu ui***/
+QWidget#wg_weihu1 QPushButton{
+	background-color:rgb(255,255,255);	
+}
+
+QWidget#wg_weihu2 QPushButton{
+	background-color:rgb(255,0, 0);	
+}
+
+QListView{
+	border:1px solid gray; /*list border*/
+}
+
+QFrame#wg_weihuframe{
+background-color: rgb(255, 255, 255);
+border-radius:15px;
+}
+
+/*add project dialog ui*/
+QWidget#addproject{
+	background-color:rgb(255,255,255)
+}
+/*in Widget of all QFrame*/
+QWidget#addproject QFrame{
+	border:1px solid rgb(214,214,214);
+}
+
+/*add pro dialog ui*/
+QWidget#addpro{
+	background-color:rgb(255,255,255)
+}
+/*in Widget of all QFrame*/
+QFrame#frame_addpro{
+	border:1px solid rgb(214,214,214);
+}
+
+/*dg_check_yq*/
+QFrame#frame_check{
+	border:1px solid rgb(214,214,214);
+}
+
+QWidget#wg_check_yq{
+	background-color:rgb(255,255,255)
+}
+QFrame#frame_check QPushButton{
+	border-image: url(:/new/home/home/button.png);
+	color:rgd(0,0,0);
+}
+
+
+
+
+/*dg_setting_add*/
+QFrame#frame_setting_1,QFrame#frame_setting_2,QFrame#frame_setting_3{
+	border:1px solid rgb(214,214,214);
+}
+
+/*outsetting*/
+QWidget#wg_outsetting{
+	background-color:rgb(255,255,255);
+}
+
+QFrame#frame_outsetting{
+	border:1px solid rgb(52, 178, 237);
+}
+
+/*dg_input*/
+QWidget#widgetdg{
+	background-color: rgb(255, 255, 255);
+}

@@ -16,6 +16,8 @@ Wg_Pic::Wg_Pic(bool picType,QWidget *parent) :
     m_size = size();
     ui->l_pic->setScaledContents(true);
     ui->l_pic->installEventFilter(this);
+    setMaximumHeight(174);
+//    setMinimumHeight(70);
 }
 
 
@@ -61,8 +63,10 @@ void Wg_Pic::show_Pixmap()
        pix = pix.transformed(trans);//旋转270度
 
        ui->l_pic->setPixmap(pix);
+       m_pic.set_pic(pic_Type, pix);
     }else{
          ui->l_pic->setPixmap(*m_pix);//QPixmap(":/new/home/home/q7.bmp"));
+         m_pic.set_pic(pic_Type, *m_pix);
          //画框
          ui->l_pic->set_Index(m_index);
          ui->l_pic->label_Update();
@@ -132,7 +136,15 @@ void Wg_Pic::paintEvent(QPaintEvent *event)
 {
     Q_UNUSED(event);
 
+//    //限制窗体大小。拉伸的限制
+//    QSize wg_size = size();
+//    if(wg_size.height() > 170)
+//        wg_size.rheight() = 170;
+
+//    resize(wg_size);
+
     ui->l_pic->resize(size());
+    qDebug() << "wg_pic size()"<<size();
 
 
 //    static QPixmap pix (":/new/home/home/q7.bmp");
@@ -169,6 +181,12 @@ void Wg_Pic::mousePressEvent(QMouseEvent *event)
 
     }
 
+}
+
+void Wg_Pic::mouseDoubleClickEvent(QMouseEvent *e)
+{
+    Q_UNUSED(e);
+    m_pic.show();
 }
 
 int Wg_Pic::select_Pic(int x, int y)

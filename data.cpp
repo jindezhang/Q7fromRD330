@@ -76,14 +76,14 @@ void Data::SetTableView()
       exit(1);
   }
 
-    queryModel = new QSqlQueryModel(this);
+    queryModel = new QSqlQueryModel();
     currentPage = 1;
     totalRecrodCount = GetTotalRecordCount();
     totalPage = GetPageCount();
     UpdateStatus();
     SetTotalPageLabel();
     RecordQuery(0);
-    ui->tableView->setModel(queryModel);
+    ui->tableView_data->setModel(queryModel);
 
     //设置表头
     setTableHeader();
@@ -92,7 +92,10 @@ void Data::SetTableView()
 void Data::setTableHeader()
 {
     int i = 0;
+
     QSqlQueryModel *queryModel_t = queryModel;
+    queryModel_t->setHeaderData(i,Qt::Horizontal,"value");
+
     auto setHeader = [&i,queryModel_t](QString value){
         queryModel_t->setHeaderData(i,Qt::Horizontal,value);
                                         i++;};
@@ -119,6 +122,7 @@ void Data::setTableHeader()
     setHeader("审核者"   );
     setHeader("警示"    );
     setHeader("备注"    );
+
 }
 
 int Data::GetTotalRecordCount()

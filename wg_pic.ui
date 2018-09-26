@@ -64,7 +64,7 @@
   <customwidget>
    <class>L_Pic</class>
    <extends>QLabel</extends>
-   <header>l_pic.h</header>
+   <header location="global">l_pic.h</header>
   </customwidget>
  </customwidgets>
  <resources/>

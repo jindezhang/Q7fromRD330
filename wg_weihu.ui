@@ -1,0 +1,482 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Wg_WeiHu</class>
+ <widget class="QWidget" name="Wg_WeiHu">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>941</width>
+    <height>571</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <widget class="QWidget" name="wg_weihuBack" native="true">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>941</width>
+     <height>571</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QWidget#wg_weihuBack{
+	background-color: rgb(52, 178, 237);
+	border-top-right-radius:15px;
+	border-top-left-radius:15px;
+	border-bottom-right-radius:15px;	
+	border-bottom-left-radius:15px;
+}
+</string>
+   </property>
+   <layout class="QGridLayout" name="gridLayout_2">
+    <item row="0" column="0">
+     <widget class="QFrame" name="wg_weihuframe">
+      <property name="font">
+       <font>
+        <family>Agency FB</family>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true"/>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+      <widget class="QLabel" name="label_2">
+       <property name="geometry">
+        <rect>
+         <x>12</x>
+         <y>10</y>
+         <width>121</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>11</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>支持的测试卡</string>
+       </property>
+      </widget>
+      <widget class="ViceButton" name="bt_shezhi_weihu">
+       <property name="geometry">
+        <rect>
+         <x>12</x>
+         <y>490</y>
+         <width>81</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>11</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true"> </string>
+       </property>
+       <property name="text">
+        <string>截距设置</string>
+       </property>
+      </widget>
+      <widget class="QListView" name="lv_card_weihu">
+       <property name="geometry">
+        <rect>
+         <x>12</x>
+         <y>40</y>
+         <width>391</width>
+         <height>441</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true"/>
+       </property>
+      </widget>
+      <widget class="ViceButton" name="bt_delete_weihu">
+       <property name="geometry">
+        <rect>
+         <x>160</x>
+         <y>490</y>
+         <width>81</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>11</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true"> </string>
+       </property>
+       <property name="text">
+        <string>删除</string>
+       </property>
+      </widget>
+      <widget class="ViceButton" name="bt_add_weihu">
+       <property name="geometry">
+        <rect>
+         <x>300</x>
+         <y>490</y>
+         <width>81</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>11</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true"> </string>
+       </property>
+       <property name="text">
+        <string>新增</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_3">
+       <property name="geometry">
+        <rect>
+         <x>480</x>
+         <y>10</y>
+         <width>71</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>11</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>结果列表：</string>
+       </property>
+      </widget>
+      <widget class="QCheckBox" name="cb_info_weihu">
+       <property name="geometry">
+        <rect>
+         <x>580</x>
+         <y>10</y>
+         <width>111</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>11</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>显示信号值</string>
+       </property>
+      </widget>
+      <widget class="QCheckBox" name="cb_ct_weihu">
+       <property name="geometry">
+        <rect>
+         <x>750</x>
+         <y>10</y>
+         <width>111</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>11</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>显示CT图像</string>
+       </property>
+      </widget>
+      <widget class="ViceButton" name="bt_card_weihu">
+       <property name="geometry">
+        <rect>
+         <x>550</x>
+         <y>40</y>
+         <width>131</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>11</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true"> </string>
+       </property>
+       <property name="text">
+        <string>批次卡管理</string>
+       </property>
+      </widget>
+      <widget class="ViceButton" name="bt_data_weihu">
+       <property name="geometry">
+        <rect>
+         <x>730</x>
+         <y>40</y>
+         <width>131</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>11</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true"/>
+       </property>
+       <property name="text">
+        <string>数据库升级处理</string>
+       </property>
+      </widget>
+      <widget class="QFrame" name="frame_5">
+       <property name="geometry">
+        <rect>
+         <x>480</x>
+         <y>130</y>
+         <width>401</width>
+         <height>111</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">#frame_5{border:1px solid rgb(52, 178, 237);}</string>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::StyledPanel</enum>
+       </property>
+       <property name="frameShadow">
+        <enum>QFrame::Plain</enum>
+       </property>
+       <property name="lineWidth">
+        <number>7</number>
+       </property>
+       <property name="midLineWidth">
+        <number>2</number>
+       </property>
+       <widget class="QCheckBox" name="cb_saomiao_weihu">
+        <property name="geometry">
+         <rect>
+          <x>30</x>
+          <y>20</y>
+          <width>201</width>
+          <height>21</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>11</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>从扫描仪读取</string>
+        </property>
+       </widget>
+       <widget class="QCheckBox" name="cb_file_weihu">
+        <property name="geometry">
+         <rect>
+          <x>30</x>
+          <y>60</y>
+          <width>201</width>
+          <height>21</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>11</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>从文件中读取</string>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QLabel" name="label_7">
+       <property name="geometry">
+        <rect>
+         <x>480</x>
+         <y>100</y>
+         <width>101</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>11</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>读取类型</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_8">
+       <property name="geometry">
+        <rect>
+         <x>480</x>
+         <y>251</y>
+         <width>101</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>11</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>仪器校准</string>
+       </property>
+      </widget>
+      <widget class="QFrame" name="frame_6">
+       <property name="geometry">
+        <rect>
+         <x>480</x>
+         <y>280</y>
+         <width>401</width>
+         <height>121</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">#frame_6{border:1px solid rgb(52, 178, 237);}</string>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::StyledPanel</enum>
+       </property>
+       <property name="frameShadow">
+        <enum>QFrame::Plain</enum>
+       </property>
+       <property name="lineWidth">
+        <number>7</number>
+       </property>
+       <property name="midLineWidth">
+        <number>2</number>
+       </property>
+       <widget class="MainButton" name="bt_tongdao_weihu">
+        <property name="geometry">
+         <rect>
+          <x>90</x>
+          <y>15</y>
+          <width>201</width>
+          <height>41</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>11</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>通道间校准</string>
+        </property>
+       </widget>
+       <widget class="MainButton" name="bt_yiqi_weihu">
+        <property name="geometry">
+         <rect>
+          <x>90</x>
+          <y>60</y>
+          <width>201</width>
+          <height>41</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>11</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>仪器间校准</string>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QComboBox" name="cbb_num_weihu">
+       <property name="geometry">
+        <rect>
+         <x>480</x>
+         <y>430</y>
+         <width>121</width>
+         <height>36</height>
+        </rect>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>0</width>
+         <height>0</height>
+        </size>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>11</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true"/>
+       </property>
+      </widget>
+      <widget class="QCheckBox" name="cb_shezhi_weihu">
+       <property name="geometry">
+        <rect>
+         <x>630</x>
+         <y>440</y>
+         <width>201</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>11</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>CRP可报告范围配置</string>
+       </property>
+      </widget>
+      <widget class="ViceButton" name="bt_pic_weihu">
+       <property name="geometry">
+        <rect>
+         <x>550</x>
+         <y>490</y>
+         <width>231</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>11</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true"/>
+       </property>
+       <property name="text">
+        <string>图片静态定位</string>
+       </property>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>MainButton</class>
+   <extends>QPushButton</extends>
+   <header location="global">mainbutton.h</header>
+  </customwidget>
+  <customwidget>
+   <class>ViceButton</class>
+   <extends>QPushButton</extends>
+   <header location="global">vicebutton.h</header>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>

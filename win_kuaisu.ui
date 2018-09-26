@@ -176,7 +176,7 @@ QWidget{border-radius:15px;}</string>
         </item>
        </layout>
       </widget>
-      <widget class="QPushButton" name="pushButton_16">
+      <widget class="MainButton" name="pushButton_16">
        <property name="geometry">
         <rect>
          <x>860</x>
@@ -199,7 +199,7 @@ QWidget{border-radius:15px;}</string>
          <normaloff>:/new/home/home/tuichu.png</normaloff>:/new/home/home/tuichu.png</iconset>
        </property>
       </widget>
-      <widget class="QPushButton" name="bt_jiaozhen">
+      <widget class="MainButton" name="bt_jiaozhen">
        <property name="geometry">
         <rect>
          <x>30</x>
@@ -218,7 +218,7 @@ QWidget{border-radius:15px;}</string>
         <string>帮助</string>
        </property>
       </widget>
-      <widget class="QPushButton" name="bt_jiaozhen_2">
+      <widget class="MainButton" name="bt_jiaozhen_2">
        <property name="geometry">
         <rect>
          <x>180</x>
@@ -237,7 +237,7 @@ QWidget{border-radius:15px;}</string>
         <string>打印</string>
        </property>
       </widget>
-      <widget class="QPushButton" name="bt_jiaozhen_3">
+      <widget class="MainButton" name="bt_jiaozhen_3">
        <property name="geometry">
         <rect>
          <x>330</x>
@@ -262,6 +262,11 @@ QWidget{border-radius:15px;}</string>
   </widget>
  </widget>
  <customwidgets>
+  <customwidget>
+   <class>MainButton</class>
+   <extends>QPushButton</extends>
+   <header location="global">mainbutton.h</header>
+  </customwidget>
   <customwidget>
    <class>wg_ks_table</class>
    <extends>QWidget</extends>

@@ -4,13 +4,14 @@
 #include <test_data.h>
 #include <win_canshu.h>
 #include "win_kuaisu.h"
+#include"wg_weihu.h"
 
 #pragma execution_character_set("utf-8")
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
     MainWindow w;
-//    Win_Kuaisu w;
+//    Wg_WeiHu w;
     //Data w;
 //    Win_Canshu w;
     w.show();

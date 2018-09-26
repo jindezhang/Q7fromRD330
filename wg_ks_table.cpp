@@ -122,6 +122,10 @@ void wg_ks_table::build_tableHead()
         set_value(tmp_value, i, 1);
     }
 
+    //设置列宽
+    for(int i = 1; i<head_list.count(); i++)
+       ui->tableWidget->setColumnWidth(i,ui->tableWidget->width()/head_list.count());
+    qDebug()<<"widget:"<<ui->tableWidget->width()/head_list.count();
     //隐藏旁边的数字，去掉默认自带的行号
     ui->tableWidget->verticalHeader()->setHidden(true);
 
