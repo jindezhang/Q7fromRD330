@@ -12,7 +12,7 @@ class Wg_locationPic;
 }
 
 
-//返回坐标值和缩放因子给其他对象。
+//★★★★★不再使用该类，转为L_Pic.class
 
 class Wg_locationPic : public QWidget
 {
@@ -26,12 +26,14 @@ public:
     void move_Left();
     void move_Down();
     void move_Right();
+
 private:
     void paintEvent(QPaintEvent *event);
 private:
     Ui::Wg_locationPic *ui;
     int m_x;
     int m_y;
+    long double common;//缩放因子
 };
 
 #endif // WG_LOCATIONPIC_H

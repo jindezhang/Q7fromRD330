@@ -16,7 +16,8 @@ widget_progress::~widget_progress()
 
 void widget_progress::set_level(int level)
 {
-    m_level = level;
+    m_level = level > 100 ? 100 : level;//最大值不得大于100
+    qDebug()<<"level:"<<m_level;
     this->repaint();
 }
 
@@ -29,8 +30,8 @@ void widget_progress::paintEvent(QPaintEvent *event)
     pa.setPen(QColor(0,0,0));
    // pa.setBrush(QColor(0,0,0));
     pa.setBrush(QColor(153,255,0));
-    for(int i = 0; i <= m_level; i++)
+    //一个进度条的框大小3*25，框之间宽度为2，总长度610。610/5 = 122，所以百分之一：1.22
+    for(int i = 0; i <= (m_level*1.22); i++)
         pa.drawRect(i*5,0,3,25);
-
 
 }

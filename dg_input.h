@@ -41,6 +41,7 @@ private:
     QComboBox* cbb_age;
     QList<QString> l_info;
     //保存格式LineEdit从上到下从左到右，然后再是年龄和性别，年龄的两个数值和单位一起了
+    QRegExpValidator* va;//only input num;
 };
 
 #endif // DG_INPUT_H

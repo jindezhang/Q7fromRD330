@@ -50,6 +50,8 @@ private slots:
     void OnSwitchPageButtonClick();//跳转页功能
     void on_pushButton_15_clicked();
 
+    void on_bt_del_clicked();
+
 private:
     void SetTableView();//设置表格
     void setTableHeader();//设置表头

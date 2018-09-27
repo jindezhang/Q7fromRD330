@@ -103,7 +103,7 @@ void MainWindow::on_bt_quxiao_clicked()
 void MainWindow::timer_Out()
 {
     t_value--;
-    if(0 == t_value){
+    if(0 > t_value){
         t->stop();
         return;
     }
@@ -136,7 +136,7 @@ void MainWindow::on_bt_liulan_clicked()
 
 void MainWindow::on_bt_help_clicked()
 {
-    Dg_AddProject dialog ;
+    Dg_SelTime dialog ;
     dialog.exec();
 }
 

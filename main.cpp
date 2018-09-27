@@ -1,7 +1,6 @@
 ﻿#include "mainwindow.h"
 #include <QApplication>
 #include "data.h"
-#include <test_data.h>
 #include <win_canshu.h>
 #include "win_kuaisu.h"
 #include"wg_weihu.h"

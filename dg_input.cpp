@@ -15,11 +15,13 @@ Dg_Input::Dg_Input(QWidget *parent) :
     v_ed.push_back(ui->ed_classroom);
 
     v_ed.push_back(ui->ed_age);//年纪
-    ui->ed_age->setValidator(new QRegExpValidator(QRegExp("[0-9]+$")));
+    va = new QRegExpValidator(QRegExp("[0-9]+$"));
+    ui->ed_age->setValidator(va);
 }
 
 Dg_Input::~Dg_Input()
 {
+    delete va;
     delete ui;
 }
 

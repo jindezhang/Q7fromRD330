@@ -27,20 +27,16 @@ SOURCES += \
         main.cpp \
         mainwindow.cpp \
     widget_progress.cpp \
-    dir_bt.cpp \
     data.cpp \
-    test_data.cpp \
     mydialog.cpp \
     win_canshu.cpp \
     customtabstyle.cpp \
     wg_canshu.cpp \
     dg_login.cpp \
     win_kuaisu.cpp \
-    my_label.cpp \
     wg_pic.cpp \
     dg_progress.cpp \
     wg_ks_table.cpp \
-    lb_check.cpp \
     l_pic.cpp \
     dg_input.cpp \
     wg_kuaisu.cpp \
@@ -56,25 +52,24 @@ SOURCES += \
     dg_setting_add.cpp \
     dg_outsetting.cpp \
     mainbutton.cpp \
-    vicebutton.cpp
+    vicebutton.cpp \
+    dg_seltime.cpp \
+    wg_searchline.cpp \
+    wg_search.cpp
 
 HEADERS += \
         mainwindow.h \
     widget_progress.h \
-    dir_bt.h \
     data.h \
-    test_data.h \
     mydialog.h \
     win_canshu.h \
     customtabstyle.h \
     wg_canshu.h \
     dg_login.h \
     win_kuaisu.h \
-    my_label.h \
     wg_pic.h \
     dg_progress.h \
     wg_ks_table.h \
-    lb_check.h \
     l_pic.h \
     dg_input.h \
     wg_kuaisu.h \
@@ -90,13 +85,15 @@ HEADERS += \
     dg_setting_add.h \
     dg_outsetting.h \
     mainbutton.h \
-    vicebutton.h
+    vicebutton.h \
+    dg_seltime.h \
+    wg_searchline.h \
+    wg_search.h
 
 FORMS += \
         mainwindow.ui \
     widget_progress.ui \
     data.ui \
-    test_data.ui \
     mydialog.ui \
     win_canshu.ui \
     wg_canshu.ui \
@@ -118,7 +115,9 @@ FORMS += \
     dg_check_td.ui \
     dg_setting_long.ui \
     dg_setting_add.ui \
-    dg_outsetting.ui
+    dg_outsetting.ui \
+    dg_seltime.ui \
+    wg_search.ui
 
 RESOURCES += \
     icon.qrc

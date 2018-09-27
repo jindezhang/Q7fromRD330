@@ -2,6 +2,9 @@
 #define DG_CHECK_TD_H
 
 #include <QDialog>
+#include<vicebutton.h>
+#include<QDebug>
+#include<mydialog.h>
 
 namespace Ui {
 class Dg_Check_td;
@@ -18,6 +21,10 @@ public:
 private slots:
     void on_pushButton_2_clicked();
     void init_Table();
+    void bt_Click();//通道按钮事件
+
+private:
+    void dialog_Show(QString& info);//获取失败打印
 private:
     Ui::Dg_Check_td *ui;
 };

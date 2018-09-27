@@ -34,7 +34,7 @@ void Dg_Setting_Long::init_Table()
     head_list<<"项目2";
     head_list<<"项目3";
 
-     ui->tableWidget->setRowCount(8);
+     //ui->tableWidget->setRowCount(8);
      ui->tableWidget->setColumnCount(head_list.count());
      ui->tableWidget->setHorizontalHeaderLabels(head_list);
 
@@ -107,13 +107,21 @@ void Dg_Setting_Long::action_add()
     Dg_Setting_add dialog;
     dialog.exec();
 
+    QList<QString> value = dialog.get_Value();
     int row_count = ui->tableWidget->rowCount();
     ui->tableWidget->insertRow(row_count);
 
 
     QTableWidgetItem* item = add_row(QString("*"));
-
     ui->tableWidget->setItem(row_count, 0, item);
+
+    int i = 0;
+    for(auto tmp: value){
+        i++;
+        QTableWidgetItem* item = add_row(tmp);
+        ui->tableWidget->setItem(row_count, i, item);
+    }
+
 
 }
 

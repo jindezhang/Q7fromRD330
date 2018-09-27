@@ -43,8 +43,7 @@
        </font>
       </property>
       <property name="styleSheet">
-       <string notr="true"> 
-</string>
+       <string notr="true"/>
       </property>
       <property name="text">
        <string>  截距设置---卡号为：</string>
@@ -121,7 +120,7 @@ border-color: rgb(255, 255, 255);</string>
        <string notr="true">color: rgb(255, 255, 255);</string>
       </property>
       <property name="text">
-       <string>00000</string>
+       <string/>
       </property>
      </widget>
      <widget class="QLabel" name="label_11">
@@ -234,6 +233,9 @@ border-color: rgb(255, 255, 255);</string>
          <pointsize>12</pointsize>
         </font>
        </property>
+       <property name="text">
+        <string/>
+       </property>
       </widget>
       <widget class="QLineEdit" name="ed_prob1_setting">
        <property name="geometry">
@@ -248,6 +250,9 @@ border-color: rgb(255, 255, 255);</string>
         <font>
          <pointsize>12</pointsize>
         </font>
+       </property>
+       <property name="text">
+        <string/>
        </property>
       </widget>
      </widget>
@@ -304,6 +309,9 @@ border-color: rgb(255, 255, 255);</string>
          <pointsize>12</pointsize>
         </font>
        </property>
+       <property name="text">
+        <string/>
+       </property>
       </widget>
       <widget class="QLabel" name="label_6">
        <property name="geometry">
@@ -354,6 +362,9 @@ border-color: rgb(255, 255, 255);</string>
         <font>
          <pointsize>12</pointsize>
         </font>
+       </property>
+       <property name="text">
+        <string/>
        </property>
       </widget>
      </widget>
@@ -410,6 +421,9 @@ border-color: rgb(255, 255, 255);</string>
          <pointsize>12</pointsize>
         </font>
        </property>
+       <property name="text">
+        <string/>
+       </property>
       </widget>
       <widget class="QLabel" name="label_8">
        <property name="geometry">
@@ -461,6 +475,9 @@ border-color: rgb(255, 255, 255);</string>
          <pointsize>12</pointsize>
         </font>
        </property>
+       <property name="text">
+        <string/>
+       </property>
       </widget>
      </widget>
      <widget class="QLabel" name="label_10">
@@ -500,13 +517,13 @@ border-color: rgb(255, 255, 255);</string>
      <zorder>bt_canal_setting</zorder>
      <zorder>pic</zorder>
      <zorder>pushButton_2</zorder>
-     <zorder>l_card</zorder>
      <zorder>label_11</zorder>
      <zorder>frame_setting_1</zorder>
      <zorder>frame_setting_2</zorder>
      <zorder>frame_setting_3</zorder>
      <zorder>label_10</zorder>
      <zorder>ed_pnum_setting</zorder>
+     <zorder>l_card</zorder>
     </widget>
    </item>
   </layout>

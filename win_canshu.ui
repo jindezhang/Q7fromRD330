@@ -179,7 +179,7 @@ border-image: url(:/new/home/home/info.png);</string>
         <string> 退出</string>
        </property>
        <property name="icon">
-        <iconset resource="icon.qrc">
+        <iconset>
          <normaloff>:/new/home/home/tuichu.png</normaloff>:/new/home/home/tuichu.png</iconset>
        </property>
       </widget>
@@ -309,6 +309,11 @@ border-image: url(:/new/home/home/info.png);</string>
  </widget>
  <customwidgets>
   <customwidget>
+   <class>MainButton</class>
+   <extends>QPushButton</extends>
+   <header location="global">mainbutton.h</header>
+  </customwidget>
+  <customwidget>
    <class>Wg_canshu</class>
    <extends>QWidget</extends>
    <header location="global">wg_canshu.h</header>
@@ -320,14 +325,7 @@ border-image: url(:/new/home/home/info.png);</string>
    <header>wg_weihu.h</header>
    <container>1</container>
   </customwidget>
-  <customwidget>
-   <class>MainButton</class>
-   <extends>QPushButton</extends>
-   <header location="global">mainbutton.h</header>
-  </customwidget>
  </customwidgets>
- <resources>
-  <include location="icon.qrc"/>
- </resources>
+ <resources/>
  <connections/>
 </ui>

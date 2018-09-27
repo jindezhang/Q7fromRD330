@@ -3,6 +3,7 @@
 
 #include <QWidget>
 #include <QPainter>
+#include<QDebug>
 
 namespace Ui {
 class widget_progress;

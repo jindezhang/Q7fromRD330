@@ -257,7 +257,7 @@
        <rect>
         <x>210</x>
         <y>410</y>
-        <width>600</width>
+        <width>610</width>
         <height>20</height>
        </rect>
       </property>
@@ -269,7 +269,7 @@
       </property>
       <property name="maximumSize">
        <size>
-        <width>600</width>
+        <width>610</width>
         <height>25</height>
        </size>
       </property>
@@ -290,7 +290,7 @@
      <widget class="QLabel" name="l_time">
       <property name="geometry">
        <rect>
-        <x>830</x>
+        <x>840</x>
         <y>410</y>
         <width>54</width>
         <height>12</height>

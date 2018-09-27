@@ -8,6 +8,8 @@ Wg_locationPic::Wg_locationPic(QWidget *parent) :
     ui->setupUi(this);
     ui->label->setScaledContents(true);
 
+
+    common = (long double)size().height() / 1003;
 }
 
 Wg_locationPic::~Wg_locationPic()
@@ -51,16 +53,15 @@ void Wg_locationPic::paintEvent(QPaintEvent *event)
     //画框 1144 * 624
 //        qDebug() << "m_index" << m_index;
 
-    long double common;//缩放因子
-    common = (long double)size().height() / 1003;
+
     QPainter painter(this);
     painter.setPen(QColor(Qt::red));
     int tmp_x = 166 * common + m_x;
     int tmp_y = 353 * common + m_y;
     int tmp_w = 1144 * common;
     int tmp_h = 624 * common;
-        qDebug() << "tmp_x" << tmp_w;
-        qDebug() <<"tmp_y" <<tmp_h;
+//        qDebug() << "tmp_x" << tmp_w;
+//        qDebug() <<"tmp_y" <<tmp_h;
 
     painter.drawRect(tmp_x, tmp_y, tmp_w, tmp_h);
 }

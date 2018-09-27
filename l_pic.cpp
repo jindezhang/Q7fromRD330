@@ -6,6 +6,8 @@ L_Pic::L_Pic( QWidget *widget): QLabel(widget)
     m_x = 0;
     m_y = 0;
     m_type = 0;
+
+    m_common = (long double)size().height() / 1003;
     repaint();
 }
 
@@ -38,12 +40,13 @@ void L_Pic::paintEvent(QPaintEvent *event)
     int tmp_y;
     int tmp_w;
     int tmp_h;
+    long double common = m_common;//缩放因子
     //右图才会画框
     if((-1 != m_index)){
         //画框
 //        qDebug() << "m_index" << m_index;
-        long double common;//缩放因子
-        common = (long double)size().height() / 1003;
+//        long double common = m_common;//缩放因子
+//        common = (long double)size().height() / 1003;
 
         painter.setPen(QColor(Qt::red));
 
@@ -61,16 +64,13 @@ void L_Pic::paintEvent(QPaintEvent *event)
         //画框 1144 * 624
     //        qDebug() << "m_index" << m_index;
 
-        long double common;//缩放因子
-        common = (long double)size().height() / 1003;
-
         painter.setPen(QColor(Qt::red));
         tmp_x = 166 * common + m_x;
         tmp_y = 353 * common + m_y;
         tmp_w = 1144 * common;
         tmp_h = 624 * common;
-        rect.setRect(tmp_x, tmp_y, tmp_w, tmp_h);
-        qDebug()<<"pic rect"<<rect;
+        m_rect.setRect(tmp_x, tmp_y, tmp_w, tmp_h);
+//        qDebug()<<"pic rect"<<m_rect;
         painter.drawRect(tmp_x, tmp_y, tmp_w, tmp_h);
     }
 }
@@ -101,5 +101,5 @@ void L_Pic::move_Right()
 
 QRectF L_Pic::get_Rect()
 {
-    return rect;
+    return m_rect;
 }

@@ -228,7 +228,7 @@ border-radius:15px;
      <string>确定</string>
     </property>
     <property name="icon">
-     <iconset resource="icon.qrc">
+     <iconset>
       <normaloff>:/new/home/home/ok.png</normaloff>:/new/home/home/ok.png</iconset>
     </property>
     <property name="iconSize">
@@ -242,18 +242,16 @@ border-radius:15px;
  </widget>
  <customwidgets>
   <customwidget>
-   <class>L_Pic</class>
-   <extends>QLabel</extends>
-   <header location="global">l_pic.h</header>
-  </customwidget>
-  <customwidget>
    <class>MainButton</class>
    <extends>QPushButton</extends>
    <header location="global">mainbutton.h</header>
   </customwidget>
+  <customwidget>
+   <class>L_Pic</class>
+   <extends>QLabel</extends>
+   <header location="global">l_pic.h</header>
+  </customwidget>
  </customwidgets>
- <resources>
-  <include location="icon.qrc"/>
- </resources>
+ <resources/>
  <connections/>
 </ui>

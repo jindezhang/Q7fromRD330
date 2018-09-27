@@ -9,7 +9,14 @@ Dg_Check_td::Dg_Check_td(QWidget *parent) :
     setWindowFlags(Qt::FramelessWindowHint | windowFlags());
 
     init_Table();
-
+    connect(ui->bt_1, SIGNAL(clicked(bool)), this, SLOT(bt_Click()));
+    connect(ui->bt_2, SIGNAL(clicked(bool)), this, SLOT(bt_Click()));
+    connect(ui->bt_3, SIGNAL(clicked(bool)), this, SLOT(bt_Click()));
+    connect(ui->bt_4, SIGNAL(clicked(bool)), this, SLOT(bt_Click()));
+    connect(ui->bt_5, SIGNAL(clicked(bool)), this, SLOT(bt_Click()));
+    connect(ui->bt_6, SIGNAL(clicked(bool)), this, SLOT(bt_Click()));
+    connect(ui->bt_7, SIGNAL(clicked(bool)), this, SLOT(bt_Click()));
+    connect(ui->bt_8, SIGNAL(clicked(bool)), this, SLOT(bt_Click()));
 }
 
 Dg_Check_td::~Dg_Check_td()
@@ -69,4 +76,53 @@ void Dg_Check_td::init_Table()
 
      //表头最后一行会自动拉伸，也可以实现充满窗体的效果
      ui->tableWidget->horizontalHeader()->setStretchLastSection(true);
+}
+
+void Dg_Check_td::bt_Click()
+{
+    ViceButton * button = qobject_cast<ViceButton *>(sender());
+    QString bt_Value = button->text();
+    //switch 语句里面执行成功，则return；
+    switch (bt_Value[2].toLatin1()) {
+    case '1':
+
+        qDebug()<<"bt_click"<<bt_Value;
+        return;
+        break;
+    case '2':
+
+        break;
+    case '3':
+
+        break;
+    case '4':
+
+        break;
+    case '5':
+
+        break;
+    case '6':
+
+        break;
+    case '7':
+
+        break;
+    case '8':
+        qDebug()<<"bt_click"<<bt_Value;
+        break;
+
+    default:
+        break;
+    }
+    dialog_Show(bt_Value);
+}
+
+void Dg_Check_td::dialog_Show(QString &info)
+{
+    myDialog dialog;
+    dialog.set_icon(0);
+    QString str = QString("获取%1数据失败").arg(info);
+    dialog.set_info(str);
+    dialog.exec();
+
 }

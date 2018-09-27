@@ -43,9 +43,7 @@
        </font>
       </property>
       <property name="styleSheet">
-       <string notr="true"> 
-
-</string>
+       <string notr="true"/>
       </property>
       <property name="text">
        <string>  仪器间通道校准</string>
@@ -114,7 +112,7 @@ border-color: rgb(255, 255, 255);</string>
         <string>通道采集数据</string>
        </property>
       </widget>
-      <widget class="ViceButton" name="bt_add_weihu">
+      <widget class="ViceButton" name="bt_1">
        <property name="geometry">
         <rect>
          <x>50</x>
@@ -135,7 +133,7 @@ border-color: rgb(255, 255, 255);</string>
         <string>通道1</string>
        </property>
       </widget>
-      <widget class="ViceButton" name="bt_add_weihu_2">
+      <widget class="ViceButton" name="bt_2">
        <property name="geometry">
         <rect>
          <x>150</x>
@@ -156,7 +154,7 @@ border-color: rgb(255, 255, 255);</string>
         <string>通道2</string>
        </property>
       </widget>
-      <widget class="ViceButton" name="bt_add_weihu_3">
+      <widget class="ViceButton" name="bt_4">
        <property name="geometry">
         <rect>
          <x>350</x>
@@ -177,7 +175,7 @@ border-color: rgb(255, 255, 255);</string>
         <string>通道4</string>
        </property>
       </widget>
-      <widget class="ViceButton" name="bt_add_weihu_4">
+      <widget class="ViceButton" name="bt_3">
        <property name="geometry">
         <rect>
          <x>250</x>
@@ -198,7 +196,7 @@ border-color: rgb(255, 255, 255);</string>
         <string>通道3</string>
        </property>
       </widget>
-      <widget class="ViceButton" name="bt_add_weihu_5">
+      <widget class="ViceButton" name="bt_6">
        <property name="geometry">
         <rect>
          <x>550</x>
@@ -219,7 +217,7 @@ border-color: rgb(255, 255, 255);</string>
         <string>通道6</string>
        </property>
       </widget>
-      <widget class="ViceButton" name="bt_add_weihu_6">
+      <widget class="ViceButton" name="bt_5">
        <property name="geometry">
         <rect>
          <x>450</x>
@@ -240,7 +238,7 @@ border-color: rgb(255, 255, 255);</string>
         <string>通道5</string>
        </property>
       </widget>
-      <widget class="ViceButton" name="bt_add_weihu_7">
+      <widget class="ViceButton" name="bt_8">
        <property name="geometry">
         <rect>
          <x>750</x>
@@ -261,7 +259,7 @@ border-color: rgb(255, 255, 255);</string>
         <string>通道8</string>
        </property>
       </widget>
-      <widget class="ViceButton" name="bt_add_weihu_8">
+      <widget class="ViceButton" name="bt_7">
        <property name="geometry">
         <rect>
          <x>650</x>

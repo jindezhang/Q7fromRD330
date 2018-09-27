@@ -182,3 +182,8 @@ void Data::on_pushButton_15_clicked()
     this->parentWidget()->show();
     this->close();
 }
+
+void Data::on_bt_del_clicked()
+{
+
+}

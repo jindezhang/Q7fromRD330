@@ -52,10 +52,16 @@ void myDialog::set_icon(int type)
     }
 }
 
-void myDialog::set_value(QString info)
+void myDialog::set_value(QString &info)
 {
 
     ui->l_tips2->setText(info);
+}
+
+void myDialog::set_icon_info(int type, QString &info)
+{
+    set_icon(type);
+    set_info(info);
 }
 
 

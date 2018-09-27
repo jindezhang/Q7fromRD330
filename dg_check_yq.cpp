@@ -21,7 +21,7 @@ void Dg_Check_yq::init_Table()
     QStringList head_list;
     head_list<<"校验机校验数据  "  ;
      head_list<<"本机通道1数据 " ;
-     ui->tableWidget->setRowCount(8);
+     //ui->tableWidget->setRowCount(8);
      ui->tableWidget->setColumnCount(head_list.count());
      ui->tableWidget->setHorizontalHeaderLabels(head_list);
 

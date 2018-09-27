@@ -181,3 +181,8 @@ QFrame#frame_outsetting{
 QWidget#widgetdg{
 	background-color: rgb(255, 255, 255);
 }
+
+/*dg_seltime*/
+QWidget#wg_seltime{
+	background-color:rgb(255,255,255);
+}

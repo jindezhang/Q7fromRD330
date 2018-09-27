@@ -68,6 +68,5 @@ int Dg_Login::get_pw()
     default:
         break;
     }
-
-
+    return -1;
 }

@@ -30,7 +30,8 @@ private:
     int m_x;
     int m_y;
     int m_type;
-    QRectF rect;
+    QRectF m_rect;
+    long double m_common;//缩放因子
 };
 
 #endif // L_PIC_H

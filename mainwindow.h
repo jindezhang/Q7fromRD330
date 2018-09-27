@@ -16,6 +16,7 @@
 #include<QSqlDatabase>
 #include<QSqlError>
 #include<dg_addproject.h>
+#include<dg_seltime.h>
 
 namespace Ui {
 class MainWindow;
