@@ -22,6 +22,11 @@ Win_Kuaisu::Win_Kuaisu(QWidget *parent) :
     //table is role
     connect(ui->wg_table, SIGNAL(row_sel(int)), wg_card_part, SLOT(index_get(int)));
     connect(ui->wg_table, SIGNAL(row_sel(int)), wg_card, SLOT(index_get(int)));
+
+    //遮罩
+    mpshade = nullptr;
+    connect(ui->wg_table, SIGNAL(sig_shade(bool)), this, SLOT(slot_shade(bool)));
+
     //右图
     QString path(":/new/home/home/q7.bmp");
     wg_card->set_Pixmap(path);
@@ -44,6 +49,7 @@ Win_Kuaisu::Win_Kuaisu(QWidget *parent) :
 
 //    ui->wg_table->sel_Row(20);
 
+
 }
 
 Win_Kuaisu::~Win_Kuaisu()
@@ -57,3 +63,24 @@ void Win_Kuaisu::on_pushButton_16_clicked()
     this->close();
 }
 
+
+void Win_Kuaisu::on_bt_jiaozhen_clicked()
+{
+    QProcess *helpProcess = new QProcess(this);
+    QStringList argument("./doc/帮助文档V3.0.chm");
+    //相对路径,文件要放在运行目录下，和数据库文件目录一样。
+    helpProcess->start("hh.exe",argument);
+
+}
+
+void Win_Kuaisu::slot_shade(bool b)
+{
+    if(!mpshade)
+        mpshade = init_Shade(this);
+
+    if(b)
+        mpshade->show();
+    else
+        mpshade->hide();
+
+}

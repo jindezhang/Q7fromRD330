@@ -1,6 +1,6 @@
 ﻿#include "data.h"
 #include "ui_data.h"
-
+#include "wg_shade.h"
 Data::Data(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::Data)
@@ -9,10 +9,12 @@ Data::Data(QWidget *parent) :
     setWindowFlags(Qt::FramelessWindowHint | windowFlags());//窗体无边框，无法移动。
     SetTableView();
 
+    mpShade = init_Shade(this);
 }
 
 Data::~Data()
 {
+    delete mpShade;
     delete ui;
 }
 
@@ -185,5 +187,8 @@ void Data::on_pushButton_15_clicked()
 
 void Data::on_bt_del_clicked()
 {
-
+    mpShade->show();
+    Dg_SelTime dialog;
+    dialog.exec();
+    mpShade->hide();
 }

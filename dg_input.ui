@@ -435,7 +435,7 @@ QLineEdit{border-width:1px;}</string>
       </property>
       <property name="styleSheet">
        <string notr="true">border-image: url(:/new/home/home/guanbi.png);
-border-color: rgb(255, 255, 255);</string>
+</string>
       </property>
       <property name="text">
        <string/>
@@ -456,8 +456,7 @@ border-color: rgb(255, 255, 255);</string>
        </font>
       </property>
       <property name="styleSheet">
-       <string notr="true"> 
-</string>
+       <string notr="true"/>
       </property>
       <property name="text">
        <string>  样本信息</string>

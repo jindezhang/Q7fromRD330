@@ -5,6 +5,8 @@
 #include <QMainWindow>
 #include <QSize>
 #include "wg_pic.h"
+#include<QProcess>
+#include "wg_shade.h"
 
 #pragma execution_character_set("utf-8")
 namespace Ui {
@@ -34,8 +36,12 @@ public:
 private slots:
     void on_pushButton_16_clicked();
 
+    void on_bt_jiaozhen_clicked();
+
+    void slot_shade(bool b);
 private:
     Ui::Win_Kuaisu *ui;
+    QWidget* mpshade;
 };
 
 #endif // WIN_KUAISU_H

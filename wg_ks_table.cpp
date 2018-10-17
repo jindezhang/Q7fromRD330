@@ -13,11 +13,13 @@ wg_ks_table::wg_ks_table(QWidget *parent) :
     //double click
     connect(ui->tableWidget, SIGNAL(doubleClicked(QModelIndex)), this, SLOT(click_double_Item(QModelIndex)));
 
-
+//    mpshade = init_Shade(parent);
+//    mpshade->resize(1024, 700);
 }
 
 wg_ks_table::~wg_ks_table()
 {
+//    delete mpshade;
     delete ui;
 }
 
@@ -74,15 +76,17 @@ void wg_ks_table::click_Item(int row)
     while(tmp_item->item(row, 1) == 0)
         row--;
     emit row_sel(tmp_item->item(row, 1)->text().toInt()-1);
-    qDebug()<<"click item"<<tmp_item->item(row, 1)->text();
+//    qDebug()<<"click item"<<tmp_item->item(row, 1)->text();
 }
 
 
 void wg_ks_table::click_double_Item(QModelIndex item)
 {
     Q_UNUSED(item);
-
+    emit sig_shade(true);
+//    WG_Shade shade(mpshade);
     kuai.exec();
+    emit sig_shade(false);
 }
 
 void wg_ks_table::build_tableHead()

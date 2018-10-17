@@ -43,6 +43,17 @@ ViceButton:pressed{
     color:rgb(40, 40, 40);
     }
 
+/*¹Ø±Õ°´Å¥ pushButton_2*/
+QPushButton#pushButton_2{
+	border-image: url(:/new/home/home/guanbi.png);
+}
+QPushButton#pushButton_2:hover{
+	border-image: url(:/new/home/home/guanbi_1.png);
+}
+QPushButton#pushButton_2:pressed{
+	border-image: url(:/new/home/home/guanbi.png);
+}
+
 /*the pic*/
 QLabel#pic{
 	border-image: url(:/new/home/home/tan_bg.png);

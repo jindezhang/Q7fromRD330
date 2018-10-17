@@ -35,7 +35,6 @@ void Win_Canshu::changePic(bool b)
         ui->label_4->setText("维护 > 维护");
         ui->bt_canshu->setStyleSheet("border-image: url(:/new/home/home/params_1.png);");
         ui->bt_weihu->setStyleSheet("border-image: url(:/new/home/home/weihu.png);");
-
     }
 }
 

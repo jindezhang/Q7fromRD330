@@ -7,6 +7,7 @@
 #include<QAction>
 #include<QTableWidgetItem>
 #include<dg_setting_add.h>
+#include <wg_shade.h>
 
 namespace Ui {
 class Dg_Setting_Long;
@@ -35,6 +36,7 @@ private slots:
 private:
     Ui::Dg_Setting_Long *ui;
     QMenu* cmenu;
+    QWidget *mpshade;
 };
 
 #endif // DG_SETTING_LONG_H

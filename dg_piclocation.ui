@@ -87,7 +87,7 @@ border-radius:15px;
          <string>提示：务必放置卡托且不放卡</string>
         </property>
        </widget>
-       <widget class="MainButton" name="pushButton">
+       <widget class="MainButton" name="bt_up">
         <property name="geometry">
          <rect>
           <x>430</x>
@@ -100,7 +100,7 @@ border-radius:15px;
          <string>上</string>
         </property>
        </widget>
-       <widget class="MainButton" name="pushButton_2">
+       <widget class="MainButton" name="bt_down">
         <property name="geometry">
          <rect>
           <x>550</x>
@@ -113,7 +113,7 @@ border-radius:15px;
          <string>下</string>
         </property>
        </widget>
-       <widget class="MainButton" name="pushButton_3">
+       <widget class="MainButton" name="bt_left">
         <property name="geometry">
          <rect>
           <x>670</x>
@@ -126,7 +126,7 @@ border-radius:15px;
          <string>左</string>
         </property>
        </widget>
-       <widget class="MainButton" name="pushButton_4">
+       <widget class="MainButton" name="bt_right">
         <property name="geometry">
          <rect>
           <x>800</x>
@@ -228,7 +228,7 @@ border-radius:15px;
      <string>确定</string>
     </property>
     <property name="icon">
-     <iconset>
+     <iconset resource="icon.qrc">
       <normaloff>:/new/home/home/ok.png</normaloff>:/new/home/home/ok.png</iconset>
     </property>
     <property name="iconSize">
@@ -252,6 +252,8 @@ border-radius:15px;
    <header location="global">l_pic.h</header>
   </customwidget>
  </customwidgets>
- <resources/>
+ <resources>
+  <include location="icon.qrc"/>
+ </resources>
  <connections/>
 </ui>

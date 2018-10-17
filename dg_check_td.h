@@ -5,7 +5,7 @@
 #include<vicebutton.h>
 #include<QDebug>
 #include<mydialog.h>
-
+#include "wg_shade.h"
 namespace Ui {
 class Dg_Check_td;
 }
@@ -27,6 +27,7 @@ private:
     void dialog_Show(QString& info);//获取失败打印
 private:
     Ui::Dg_Check_td *ui;
+    QWidget* mpshade;
 };
 
 #endif // DG_CHECK_TD_H

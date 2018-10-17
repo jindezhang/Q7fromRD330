@@ -15,10 +15,12 @@ Dg_AddProject::Dg_AddProject(QWidget *parent) :
     connect(ui->ed_id, SIGNAL(editingFinished()), this, SLOT(check_CardID()));
     ui->ed_t->setValidator(new QRegExpValidator(QRegExp("[0-9]+$")));//+ 匹配前一个表达式出现一次或者多次；$ 字符结束的位置
 
+    mpshade = init_Shade(this);
 }
 
 Dg_AddProject::~Dg_AddProject()
 {
+    delete mpshade;
     delete ui;
 }
 
@@ -98,6 +100,7 @@ void Dg_AddProject::on_bt_move_clicked()
         if(0  == count1)
             return;
         if(m_select.count() == 3 || count1 > 3){
+            WG_Shade shade(mpshade);
             myDialog dialog;
             dialog.set_icon(0);
             dialog.set_info(QString("最多支持三个项目"));
@@ -150,6 +153,7 @@ void Dg_AddProject::add_Text(QStringList &info)
 bool Dg_AddProject::check_CardID()
 {
     QString info = "卡号必须是6700~6799，67100~67255";
+    WG_Shade shade(mpshade);
     myDialog dialog;
     dialog.set_icon(0);
     dialog.set_info(info);
@@ -176,6 +180,7 @@ void Dg_AddProject::on_bt_clear_clicked()
 
 void Dg_AddProject::on_bt_add_clicked()
 {
+    WG_Shade shade(mpshade);
     Dg_AddPro dialog;
     dialog.exec();
 }

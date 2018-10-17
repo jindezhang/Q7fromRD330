@@ -2,6 +2,7 @@
 #define DATA_H
 
 #include <QWidget>
+#include <dg_seltime.h>
 
 namespace Ui {
 class Data;
@@ -68,6 +69,7 @@ private:
     int       totalPage;    //总页数
     int       totalRecrodCount;     //总记录数
     enum      {PageRecordCount = 5};//每页显示记录数
+    QWidget *mpShade;
 };
 
 #endif // DATA_H

@@ -10,10 +10,12 @@ Dg_Setting_Long::Dg_Setting_Long(QWidget *parent) :
 
     init_Table();
     cmenu = nullptr;
+    mpshade = init_Shade(this);
 }
 
 Dg_Setting_Long::~Dg_Setting_Long()
 {
+    delete cmenu, mpshade;
     delete ui;
 }
 
@@ -104,6 +106,7 @@ void Dg_Setting_Long::action_mod()
 
 void Dg_Setting_Long::action_add()
 {
+    WG_Shade shade(mpshade);
     Dg_Setting_add dialog;
     dialog.exec();
 

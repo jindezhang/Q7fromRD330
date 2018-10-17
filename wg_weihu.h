@@ -29,7 +29,7 @@ public:
     ~Wg_WeiHu();
 
 private slots:
-    void on_click_List();
+    void click_List();
     void on_bt_pic_weihu_clicked();
 
     void on_bt_yiqi_weihu_clicked();
@@ -44,6 +44,7 @@ private:
     void init_ListView();//初始化ListView
 private:
     Ui::Wg_WeiHu *ui;
+    QWidget* mpShade;
 };
 
 #endif // WG_WEIHU_H

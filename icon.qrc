@@ -11,9 +11,6 @@
         <file>home/快速检测.png</file>
         <file>home/浏览数据.png</file>
         <file>home/扫描检测.png</file>
-        <file>home/add-line_horizontal.png</file>
-        <file>home/add-line_vertical.png</file>
-        <file>home/Alarm02.wav</file>
         <file>home/array_down.png</file>
         <file>home/array_up.png</file>
         <file>home/button.png</file>
@@ -77,7 +74,7 @@
         <file>mainwindow.h</file>
         <file>mainwindow.ui</file>
     </qresource>
-    <qresource prefix="/new" lang="qss">
+    <qresource lang="qss" prefix="/new">
         <file>Qss.qss</file>
     </qresource>
 </RCC>

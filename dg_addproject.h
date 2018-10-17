@@ -13,7 +13,7 @@
 #include<mydialog.h>
 #include<QRegExpValidator>
 #include<QRegExp>
-
+#include "wg_shade.h"
 
 #pragma execution_character_set("utf-8")
 namespace Ui {
@@ -44,6 +44,7 @@ private slots:
 private:
     Ui::Dg_AddProject *ui;
     QStringList m_select;
+    QWidget* mpshade;
 };
 
 #endif // DG_ADDPROJECT_H

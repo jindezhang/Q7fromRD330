@@ -1,6 +1,7 @@
 ﻿#include "mainwindow.h"
 #include "ui_mainwindow.h"
 
+#include "wg_shade.h"
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::MainWindow)
@@ -38,10 +39,15 @@ MainWindow::MainWindow(QWidget *parent) :
 
     init_SQLite();
 
+    mpShadeWindow = nullptr;
+    mpShadeWindow = init_Shade((QWidget *)this);
+    if(mpShadeWindow == nullptr)
+        qDebug()<<"nullptr";
 }
 
 MainWindow::~MainWindow()
 {
+    delete t,ui_data,ui_kuaisu,ui_canshu,mpShadeWindow;
     delete ui;
 }
 
@@ -54,12 +60,7 @@ void MainWindow::fuhua_show(bool b)
 {
     ui->bt_kuaisu->setEnabled(!b);
     t_value = 100;
-    if(b)
-    {
-        ui->label_3->show();
-        ui->wg_progress->show();
-        ui->l_time->show();
-        ui->bt_quxiao->show();
+    if(b){
         t->start(1000);
         ui->bt_kuaisu->setStyleSheet("QToolButton{\
                                      background-color: rgb(167,167,167);\
@@ -70,6 +71,12 @@ void MainWindow::fuhua_show(bool b)
                             QToolButton:pressed{\
                                 color:#A0DAFB;\
                                 background:#2483C7;}");
+
+        ui->wg_progress->set_level(0);
+        ui->label_3->show();
+        ui->wg_progress->show();
+        ui->l_time->show();
+        ui->bt_quxiao->show();
 
     }else{
         ui->label_3->hide();
@@ -136,8 +143,11 @@ void MainWindow::on_bt_liulan_clicked()
 
 void MainWindow::on_bt_help_clicked()
 {
-    Dg_SelTime dialog ;
-    dialog.exec();
+    QProcess *helpProcess = new QProcess(this);
+    QStringList argument("./doc/帮助文档V3.0.chm");
+    //相对路径,文件要放在运行目录下，和数据库文件目录一样。
+    helpProcess->start("hh.exe",argument);//hh.exe 是系统自带查看chm文件的程序
+    //delete helpProcess;
 }
 
 void MainWindow::on_bt_canshu_clicked()
@@ -148,10 +158,15 @@ void MainWindow::on_bt_canshu_clicked()
     this->hide();
 }
 
+#include <wg_shade.h>
 void MainWindow::on_bt_saomiao_clicked()
 {
-
-    dg_login.show();
+    qDebug()<<"heo";
+    mpShadeWindow->show();
+    Dg_Login l;
+    l.exec();
+    mpShadeWindow->hide();
+//    qDebug()<<"heo";
 }
 
 void MainWindow::on_bt_kuaisu_clicked()
@@ -181,3 +196,12 @@ void MainWindow::init_SQLite()
         qDebug() << "Error: Failed to connect database." << database.lastError();
     }
 }
+
+//void MainWindow::init_Shade()
+//{
+//    mpShadeWindow = new QWidget(this);
+//    QString str("QWidget{background-color:rgba(0,0,0,0.6);}");
+//    mpShadeWindow->setStyleSheet(str);
+//    mpShadeWindow->setGeometry(0, 0, width(), height());
+//    mpShadeWindow->hide();
+//}

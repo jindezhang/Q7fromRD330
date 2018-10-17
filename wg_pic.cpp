@@ -144,7 +144,7 @@ void Wg_Pic::paintEvent(QPaintEvent *event)
 //    resize(wg_size);
 
     ui->l_pic->resize(size());
-    qDebug() << "wg_pic size()"<<size();
+//    qDebug() << "wg_pic size()"<<size();
 
 
 //    static QPixmap pix (":/new/home/home/q7.bmp");

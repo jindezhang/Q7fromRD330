@@ -1,6 +1,6 @@
 ﻿#include "wg_weihu.h"
 #include "ui_wg_weihu.h"
-
+#include "wg_shade.h"
 Wg_WeiHu::Wg_WeiHu(QWidget *parent) :
     QWidget(parent),
     ui(new Ui::Wg_WeiHu)
@@ -9,26 +9,31 @@ Wg_WeiHu::Wg_WeiHu(QWidget *parent) :
 
     //
     init_ListView();
-
+    mpShade = init_Shade(parent);
+    mpShade->resize(1024, 700);
+    //qDebug()<<"parent"<<parent->size();
 }
 
 Wg_WeiHu::~Wg_WeiHu()
 {
+    delete mpShade;
     delete ui;
 }
 
-void Wg_WeiHu::on_click_List()
+void Wg_WeiHu::click_List()
 {
+    mpShade->show();
     myDialog dialog(this);
     QString tmp_str = ui->lv_card_weihu->currentIndex().data().toString();
     tmp_str = QString("%1\n%2\n%3\n%4\n%5").arg(tmp_str).arg(tmp_str).arg(tmp_str).arg(tmp_str).arg(tmp_str);
     dialog.set_value(tmp_str);
     dialog.exec();
+    mpShade->hide();
 }
 
 void Wg_WeiHu::init_ListView()
 {
-    connect(ui->lv_card_weihu, SIGNAL(clicked(QModelIndex)), this, SLOT(on_click_List()));
+    connect(ui->lv_card_weihu, SIGNAL(clicked(QModelIndex)), this, SLOT(click_List()));
     //ui->lv_card_weihu->setFont(QFont("楷体", 11, 50));//不能设置单元格内字体
     ui->lv_card_weihu->setSelectionMode(QAbstractItemView::SingleSelection);
 //    ui->lv_card_weihu->;
@@ -60,7 +65,7 @@ void Wg_WeiHu::init_ListView()
         model->appendRow(item);
         //qDebug()<<query.value(0).toString();
     }
-    qDebug()<<"init_listview";
+//    qDebug()<<"init_listview";
    // model->appendRow(new QStandardItem("hello"));
     ui->lv_card_weihu->setModel(model);
 
@@ -68,32 +73,37 @@ void Wg_WeiHu::init_ListView()
 
 void Wg_WeiHu::on_bt_pic_weihu_clicked()
 {
+    mpShade->show();
     Dg_PicLocation dialog(this);
     dialog.exec();
-
+    mpShade->hide();
 }
 
 void Wg_WeiHu::on_bt_yiqi_weihu_clicked()
 {
+    mpShade->show();
     Dg_Check_yq dialog;
     dialog.exec();
+    mpShade->hide();
 }
 
 void Wg_WeiHu::on_bt_tongdao_weihu_clicked()
 {
+    WG_Shade shade(mpShade);
     Dg_Check_td dialog;
     dialog.exec();
 }
 
 void Wg_WeiHu::on_bt_shezhi_weihu_clicked()
 {
+    WG_Shade shade(mpShade);
     Dg_Setting_Long dialog;
     dialog.exec();
 }
 
 void Wg_WeiHu::on_bt_add_weihu_clicked()
 {
-
+    WG_Shade shade(mpShade);
     Dg_AddProject dialog;
     dialog.exec();
 }

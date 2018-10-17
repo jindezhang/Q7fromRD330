@@ -55,7 +55,8 @@ SOURCES += \
     vicebutton.cpp \
     dg_seltime.cpp \
     wg_searchline.cpp \
-    wg_search.cpp
+    wg_search.cpp \
+    wg_shade.cpp
 
 HEADERS += \
         mainwindow.h \
@@ -88,7 +89,8 @@ HEADERS += \
     vicebutton.h \
     dg_seltime.h \
     wg_searchline.h \
-    wg_search.h
+    wg_search.h \
+    wg_shade.h
 
 FORMS += \
         mainwindow.ui \

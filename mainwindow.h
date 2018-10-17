@@ -17,11 +17,13 @@
 #include<QSqlError>
 #include<dg_addproject.h>
 #include<dg_seltime.h>
+#include<QProcess>
+
 
 namespace Ui {
 class MainWindow;
 }
-
+#pragma execution_character_set("utf-8")
 class MainWindow : public QMainWindow
 {
     Q_OBJECT
@@ -49,6 +51,7 @@ private slots:
     void on_bt_kuaisu_clicked();//快速扫描的按钮
     void init_SQLite();
 
+    //void init_Shade();
 private:
     Ui::MainWindow *ui;
     QTimer* t;
@@ -56,7 +59,7 @@ private:
     Data *ui_data;
     Win_Kuaisu* ui_kuaisu;
     Win_Canshu* ui_canshu;
-    wg_kuaisu dg_login;
+    QWidget *mpShadeWindow;
 };
 
 #endif // MAINWINDOW_H

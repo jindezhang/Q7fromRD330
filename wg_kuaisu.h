@@ -32,8 +32,8 @@ private slots:
 
 private:
     QVector<QLineEdit *> v_ed;
-    QComboBox* cbb_gender;
-    QComboBox* cbb_age;
+//    QComboBox* cbb_gender;
+//    QComboBox* cbb_age;
     Ui::wg_kuaisu *ui;
 };
 

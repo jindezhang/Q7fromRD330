@@ -17,10 +17,13 @@ Dg_Check_td::Dg_Check_td(QWidget *parent) :
     connect(ui->bt_6, SIGNAL(clicked(bool)), this, SLOT(bt_Click()));
     connect(ui->bt_7, SIGNAL(clicked(bool)), this, SLOT(bt_Click()));
     connect(ui->bt_8, SIGNAL(clicked(bool)), this, SLOT(bt_Click()));
+
+    mpshade = init_Shade(this);
 }
 
 Dg_Check_td::~Dg_Check_td()
 {
+    delete mpshade;
     delete ui;
 }
 
@@ -119,6 +122,7 @@ void Dg_Check_td::bt_Click()
 
 void Dg_Check_td::dialog_Show(QString &info)
 {
+    WG_Shade shade(mpshade);
     myDialog dialog;
     dialog.set_icon(0);
     QString str = QString("获取%1数据失败").arg(info);

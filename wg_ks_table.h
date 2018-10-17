@@ -11,6 +11,7 @@
 #include<QTableWidgetItem>
 #include<wg_kuaisu.h>
 #include<dg_input.h>
+#include "wg_shade.h"
 
 namespace Ui {
 class wg_ks_table;
@@ -33,6 +34,7 @@ public slots:
 
 signals:
     void row_sel(int row);
+    void sig_shade(bool b);//遮罩
 private slots:
     void click_Check(int row, int col);//点击了列表复选框的槽函数,复选框用图标表示.同时表示点击某行
     void click_Item(int row);//单击选择某行
@@ -46,6 +48,7 @@ private:
     Ui::wg_ks_table *ui;
     QVector<bool> v_check;//用于保存选中的行数据的选中。
     Dg_Input kuai;
+//    QWidget *mpshade;
 };
 
 #endif // WG_KS_TABLE_H

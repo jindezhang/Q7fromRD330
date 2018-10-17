@@ -483,7 +483,7 @@ QPushButton:pressed{
    </property>
    <layout class="QHBoxLayout" name="horizontalLayout">
     <item>
-     <widget class="MainButton" name="pushButton_2">
+     <widget class="MainButton" name="bt_export_data">
       <property name="minimumSize">
        <size>
         <width>130</width>
@@ -509,7 +509,7 @@ QPushButton:pressed{
      </spacer>
     </item>
     <item>
-     <widget class="MainButton" name="pushButton_17">
+     <widget class="MainButton" name="bt_print_data">
       <property name="minimumSize">
        <size>
         <width>130</width>
@@ -561,7 +561,7 @@ QPushButton:pressed{
      </spacer>
     </item>
     <item>
-     <widget class="MainButton" name="pushButton_13">
+     <widget class="MainButton" name="bt_open_data">
       <property name="minimumSize">
        <size>
         <width>130</width>
@@ -587,7 +587,7 @@ QPushButton:pressed{
      </spacer>
     </item>
     <item>
-     <widget class="MainButton" name="pushButton_14">
+     <widget class="MainButton" name="bt_create_data">
       <property name="minimumSize">
        <size>
         <width>130</width>

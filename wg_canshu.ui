@@ -134,7 +134,7 @@ p, li { white-space: pre-wrap; }
            <string>打印机选择：</string>
           </property>
          </widget>
-         <widget class="ViceButton" name="pushButton">
+         <widget class="ViceButton" name="bt_print_canshu">
           <property name="geometry">
            <rect>
             <x>170</x>
@@ -155,7 +155,7 @@ p, li { white-space: pre-wrap; }
            <string>打印输出配置</string>
           </property>
          </widget>
-         <widget class="QCheckBox" name="checkBox">
+         <widget class="QCheckBox" name="cb_print_canshu">
           <property name="geometry">
            <rect>
             <x>170</x>
@@ -173,7 +173,7 @@ p, li { white-space: pre-wrap; }
            <string>自动打印结果（小条）</string>
           </property>
          </widget>
-         <widget class="QComboBox" name="comboBox_2">
+         <widget class="QComboBox" name="cbb_print_canshu">
           <property name="geometry">
            <rect>
             <x>170</x>
@@ -199,7 +199,7 @@ p, li { white-space: pre-wrap; }
 		}</string>
           </property>
          </widget>
-         <widget class="QComboBox" name="comboBox_4">
+         <widget class="QComboBox" name="cbb_print_small">
           <property name="geometry">
            <rect>
             <x>170</x>
@@ -250,7 +250,7 @@ p, li { white-space: pre-wrap; }
          <property name="midLineWidth">
           <number>2</number>
          </property>
-         <widget class="QComboBox" name="comboBox_3">
+         <widget class="QComboBox" name="cbb_report_canshu">
           <property name="geometry">
            <rect>
             <x>167</x>
@@ -324,7 +324,7 @@ p, li { white-space: pre-wrap; }
            </rect>
           </property>
          </widget>
-         <widget class="QCheckBox" name="checkBox_2">
+         <widget class="QCheckBox" name="cb_report">
           <property name="geometry">
            <rect>
             <x>165</x>
@@ -367,7 +367,7 @@ p, li { white-space: pre-wrap; }
          <property name="midLineWidth">
           <number>2</number>
          </property>
-         <widget class="QCheckBox" name="checkBox_3">
+         <widget class="QCheckBox" name="cb_code_allow">
           <property name="geometry">
            <rect>
             <x>30</x>
@@ -385,7 +385,7 @@ p, li { white-space: pre-wrap; }
            <string>允许</string>
           </property>
          </widget>
-         <widget class="QCheckBox" name="checkBox_4">
+         <widget class="QCheckBox" name="cb_code_reset">
           <property name="geometry">
            <rect>
             <x>30</x>
@@ -403,7 +403,7 @@ p, li { white-space: pre-wrap; }
            <string>隔天重置</string>
           </property>
          </widget>
-         <widget class="QLabel" name="label_5">
+         <widget class="QLabel" name="l_code_num">
           <property name="geometry">
            <rect>
             <x>160</x>
@@ -425,7 +425,7 @@ p, li { white-space: pre-wrap; }
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;当前编号&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
           </property>
          </widget>
-         <widget class="QLineEdit" name="lineEdit_2">
+         <widget class="QLineEdit" name="ed_code_num">
           <property name="geometry">
            <rect>
             <x>280</x>
@@ -435,7 +435,7 @@ p, li { white-space: pre-wrap; }
            </rect>
           </property>
          </widget>
-         <widget class="QLineEdit" name="lineEdit_3">
+         <widget class="QLineEdit" name="ed_code_start">
           <property name="geometry">
            <rect>
             <x>280</x>
@@ -445,7 +445,7 @@ p, li { white-space: pre-wrap; }
            </rect>
           </property>
          </widget>
-         <widget class="QLabel" name="label_6">
+         <widget class="QLabel" name="l_code_start">
           <property name="geometry">
            <rect>
             <x>160</x>
@@ -624,6 +624,21 @@ p, li { white-space: pre-wrap; }
 		width:30px
 		}</string>
              </property>
+             <item>
+              <property name="text">
+               <string>COM1</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>COM2</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>COM3</string>
+              </property>
+             </item>
             </widget>
            </item>
            <item row="1" column="0">
@@ -656,6 +671,16 @@ p, li { white-space: pre-wrap; }
 		width:30px
 		}</string>
              </property>
+             <item>
+              <property name="text">
+               <string>115200</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>9600</string>
+              </property>
+             </item>
             </widget>
            </item>
            <item row="2" column="0">
@@ -781,7 +806,7 @@ p, li { white-space: pre-wrap; }
          <property name="midLineWidth">
           <number>2</number>
          </property>
-         <widget class="QCheckBox" name="checkBox_6">
+         <widget class="QCheckBox" name="cb_arrow">
           <property name="geometry">
            <rect>
             <x>30</x>
@@ -799,7 +824,7 @@ p, li { white-space: pre-wrap; }
            <string>箭头指示阳性</string>
           </property>
          </widget>
-         <widget class="QCheckBox" name="checkBox_7">
+         <widget class="QCheckBox" name="cb_keys">
           <property name="geometry">
            <rect>
             <x>30</x>
@@ -817,7 +842,7 @@ p, li { white-space: pre-wrap; }
            <string>自动弹出屏幕键盘</string>
           </property>
          </widget>
-         <widget class="ViceButton" name="pushButton_4">
+         <widget class="ViceButton" name="bt_config">
           <property name="geometry">
            <rect>
             <x>30</x>
@@ -861,7 +886,7 @@ p, li { white-space: pre-wrap; }
             </widget>
            </item>
            <item>
-            <widget class="QLineEdit" name="lineEdit_5">
+            <widget class="QLineEdit" name="ed_picnum">
              <property name="minimumSize">
               <size>
                <width>0</width>

@@ -7,6 +7,7 @@
 #include<QMargins>
 #include<QHBoxLayout>
 #include<QMessageBox>
+#include<QDebug>
 
 class Wg_SearchLine : public QLineEdit
 {

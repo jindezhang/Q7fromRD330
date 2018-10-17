@@ -214,7 +214,7 @@ border-color: rgb(255, 255, 255);</string>
       <widget class="ViceButton" name="bt_today">
        <property name="geometry">
         <rect>
-         <x>50</x>
+         <x>140</x>
          <y>230</y>
          <width>75</width>
          <height>23</height>
@@ -227,7 +227,7 @@ border-color: rgb(255, 255, 255);</string>
       <widget class="ViceButton" name="bt_select">
        <property name="geometry">
         <rect>
-         <x>230</x>
+         <x>240</x>
          <y>230</y>
          <width>75</width>
          <height>23</height>
@@ -235,6 +235,19 @@ border-color: rgb(255, 255, 255);</string>
        </property>
        <property name="text">
         <string>确定</string>
+       </property>
+      </widget>
+      <widget class="ViceButton" name="bt_select_cancel">
+       <property name="geometry">
+        <rect>
+         <x>40</x>
+         <y>230</y>
+         <width>75</width>
+         <height>23</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>取消</string>
        </property>
       </widget>
      </widget>

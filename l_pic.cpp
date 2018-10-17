@@ -5,9 +5,7 @@ L_Pic::L_Pic( QWidget *widget): QLabel(widget)
     m_index = -1;
     m_x = 0;
     m_y = 0;
-    m_type = 0;
-
-    m_common = (long double)size().height() / 1003;
+    m_type = 0;  
     repaint();
 }
 
@@ -40,6 +38,7 @@ void L_Pic::paintEvent(QPaintEvent *event)
     int tmp_y;
     int tmp_w;
     int tmp_h;
+    m_common = (long double)size().height() / 1003;
     long double common = m_common;//缩放因子
     //右图才会画框
     if((-1 != m_index)){
@@ -70,7 +69,7 @@ void L_Pic::paintEvent(QPaintEvent *event)
         tmp_w = 1144 * common;
         tmp_h = 624 * common;
         m_rect.setRect(tmp_x, tmp_y, tmp_w, tmp_h);
-//        qDebug()<<"pic rect"<<m_rect;
+        qDebug()<<"pic rect"<<m_rect;
         painter.drawRect(tmp_x, tmp_y, tmp_w, tmp_h);
     }
 }

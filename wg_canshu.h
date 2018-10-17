@@ -5,6 +5,8 @@
 #include<QFileDialog>
 #include<dg_outsetting.h>
 #include <QDebug>
+#include<dg_outsetting.h>
+#include"wg_shade.h"
 
 namespace Ui {
 class Wg_canshu;
@@ -29,8 +31,11 @@ private slots:
 
     void on_checkBox_5_clicked(bool checked);
 
+    void on_bt_print_canshu_clicked();
+
 private:
     Ui::Wg_canshu *ui;
+    QWidget* mpShade;
 };
 
 #endif // WG_CANSHU_H

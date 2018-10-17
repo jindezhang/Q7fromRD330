@@ -27,7 +27,7 @@ void Dg_PicLocation::load_Pixmap()
     ui->l_pic_piclocation->setPixmap(tmp_pix);
 }
 
-void Dg_PicLocation::on_pushButton_clicked()
+void Dg_PicLocation::on_bt_up_clicked()
 {
     ui->l_pic_piclocation->move_Top();
 }
@@ -51,4 +51,21 @@ void Dg_PicLocation::on_pushButton_3_clicked()
 void Dg_PicLocation::on_pushButton_4_clicked()
 {
     ui->l_pic_piclocation->move_Right();
+}
+
+
+
+void Dg_PicLocation::on_bt_down_clicked()
+{
+    on_pushButton_2_clicked();
+}
+
+void Dg_PicLocation::on_bt_left_clicked()
+{
+    on_pushButton_3_clicked();
+}
+
+void Dg_PicLocation::on_bt_right_clicked()
+{
+    on_pushButton_4_clicked();
 }

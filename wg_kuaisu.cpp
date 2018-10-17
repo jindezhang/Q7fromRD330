@@ -21,6 +21,7 @@ wg_kuaisu::wg_kuaisu(QWidget *parent) :
 
 wg_kuaisu::~wg_kuaisu()
 {
+//    delete cbb_age, cbb_gender;
     delete ui;
 }
 
